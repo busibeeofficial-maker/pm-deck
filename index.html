@@ -66,9 +66,6 @@ h1 em{font-style:normal;color:var(--ochre)}
 .say b{font-weight:700}
 .say em{font-style:normal;font-weight:700;color:var(--ochre)}
 .say-sub{font-size:16.5px;line-height:1.52;color:var(--ink-2);margin-top:13px;max-width:840px}
-.lede{font-size:19.5px;line-height:1.56;color:var(--ink-2);max-width:640px}
-.lede b{color:var(--ink);font-weight:600}
-.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
 
 /* ─────────── 01 · титул ─────────── */
 .title-pad{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;
@@ -86,9 +83,6 @@ h1 em{font-style:normal;color:var(--ochre)}
   font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--ink-3);letter-spacing:.03em}
 .title-foot b{color:var(--ink);font-weight:600}
 .title-foot div:last-child{text-align:right}
-
-/* ─────────── 02 · штрихкод ─────────── */
-.split2{display:grid;grid-template-columns:1fr 460px;gap:0 64px;margin-top:42px;align-items:center}
 .hero{position:relative;display:flex;flex-direction:column;align-items:flex-start}
 #bcHero{display:block;width:360px;max-width:100%;
   -webkit-clip-path:inset(0 0 0 0);clip-path:inset(0 0 0 0)}
@@ -190,45 +184,15 @@ ul.pl li span{display:block;font-size:15px;line-height:1.42;color:var(--ink-3);m
 .two{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:26px}
 .two p{font-size:16px;line-height:1.5;color:var(--ink-2)}
 .two p b{color:var(--ink);font-weight:600}
-.refline{font-family:var(--mono);font-size:10.5px;line-height:1.6;color:var(--ink-3);margin-top:11px;
-  letter-spacing:.02em}
 
 /* ─────────── 08 · врезка ─────────── */
 .panel{margin-top:28px;background:var(--paper-2);padding:22px 26px;
   font-size:15px;line-height:1.52;color:var(--ink-2)}
 .panel b{color:var(--ink);font-weight:600}
-
-/* ─────────── 09 · таймлайн ─────────── */
-.tl{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border-top:1px solid var(--hair);
-  margin-top:28px}
-.tl>div{position:relative;padding:17px 30px 0 0}
-.tl>div::before{content:"";position:absolute;top:0;left:0;width:1px;height:9px;background:var(--hair-3)}
-.tl>div.bad::before{width:2px;height:15px;background:var(--rust)}
-.tl .tm{display:block;font-family:var(--mono);font-size:19px;letter-spacing:.03em;color:var(--ink);
-  font-variant-numeric:tabular-nums}
-.tl>div.bad .tm{color:var(--rust)}
-.tl .tt{display:block;font-size:14.5px;line-height:1.42;color:var(--ink-2);margin-top:9px}
-.tl>div.bad .tt{color:var(--ink);font-weight:600}
-
-/* ─────────── 10 · вопросы ─────────── */
-.askgrid{display:grid;grid-template-columns:1.32fr 1fr;gap:0 60px;margin-top:30px}
-.ask{display:grid;grid-template-columns:58px 1fr;gap:0 20px;padding:14px 0;
-  border-bottom:1px solid var(--hair-2)}
-.ask:first-child{padding-top:0}
-.ask:last-child{border-bottom:0}
 .ask .i{font-size:32px;font-weight:200;line-height:.9;color:var(--ochre);
   font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 .ask .q{font-size:18.5px;font-weight:600;line-height:1.3;color:var(--ink);letter-spacing:-.012em}
 .ask .b{grid-column:2;font-size:14.5px;line-height:1.42;color:var(--ink-3);margin-top:5px}
-.mon{list-style:none}
-.mon li{display:grid;grid-template-columns:32px 1fr;gap:0 15px;padding:9px 0;
-  border-bottom:1px solid var(--hair-2);align-items:baseline}
-.mon li:last-child{border-bottom:0}
-.mon .w{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--olive)}
-.mon li.you .w{color:var(--ochre)}
-.mon .x{font-size:15px;line-height:1.38;color:var(--ink-2)}
-.final{margin-top:30px;padding-top:22px;border-top:1px solid var(--hair-3)}
 
 /* ─────────── плотный регистр: слайды с большим объёмом ─────────── */
 .pad.dense{padding:56px 96px 62px}
@@ -348,7 +312,7 @@ body.notes-on .canvas{transform-origin:top center}
   color:#D9A23F;margin-bottom:11px}
 .notes .row{display:grid;grid-template-columns:104px 1fr;gap:8px 16px;padding:7px 0;
   border-top:1px solid rgba(247,242,232,.09);align-items:baseline}
-.notes .row:first-of-type{border-top:0}
+.notes .nh + .row{border-top:0}
 .notes .lb{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
   color:#8B7E6C}
 .notes .lb.say{color:#94A45C}
@@ -385,13 +349,13 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 @media print{
   @page{size:297mm 210mm;margin:9mm}
   html,body{overflow:visible;height:auto;background:#fff}
-  #deck{position:static;overflow:visible;background:#fff;width:800px;margin:0 auto}
+  #deck{position:static;overflow:visible;background:#fff;width:770px;margin:0 auto}
   #help,#hintbar{display:none!important}
   .slide{position:static;display:block!important;break-after:page;page-break-after:always;
     break-inside:avoid;page-break-inside:avoid}
   .slide:last-child{break-after:auto;page-break-after:auto}
-  .cwrap{width:800px;height:450px;overflow:hidden}
-  .canvas{transform:scale(.625)!important;transform-origin:top left!important;
+  .cwrap{width:770px;height:434px;overflow:hidden}
+  .canvas{transform:scale(.6016)!important;transform-origin:top left!important;
     -webkit-print-color-adjust:exact;print-color-adjust:exact}
   body.js .an,.an{opacity:1!important;transform:none!important}
   body.js #bcHero,#bcHero{-webkit-clip-path:none!important;clip-path:none!important}
@@ -399,16 +363,17 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   body.js .bc-err,.bc-err{opacity:1!important;transform:none!important}
   #reviewChart g{opacity:1!important}
   #reviewChart rect{transform:none!important;transition:none!important}
-  .notes{position:static;display:block!important;max-height:none;overflow:visible;width:800px;
+  .notes{position:static;display:block!important;max-height:none;overflow:visible;width:770px;
     background:#fff;color:#1E1A17;border-top:1px solid #999;box-shadow:none;
     padding:11px 0 0;margin-top:9px;break-inside:avoid;page-break-inside:avoid}
   .notes .nh{color:#8B7E6C;margin-bottom:7px}
-  .notes .tx{color:#1E1A17;font-size:11px;line-height:1.4;max-width:none}
+  .notes .tx{color:#1E1A17;font-size:10.5px;line-height:1.36;max-width:none}
   .notes .lb{color:#6B6055;font-size:9px}
   .notes .lb.say{color:#4A5A26}
   .notes .lb.dont{color:#A6421F}
   .notes .lb.qa{color:#8A6A2A}
-  .notes .row{grid-template-columns:78px 1fr;border-top:1px solid #DDD;padding:5px 0;gap:6px 12px}
+  .notes .row{grid-template-columns:72px 1fr;border-top:1px solid #DDD;padding:4px 0;gap:5px 11px}
+  .notes .nh + .row{border-top:0}
   .notes .tx i{color:#6B6055}
 }
 </style>
@@ -442,7 +407,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 </div></div>
 <aside class="notes">
   <div class="nh">Слайд 01 · Титул</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы разбирали не приложение, а момент покупки. В конце я попрошу у вас четыре вещи — список короткий, он на последнем слайде.» На титуле не задерживайся, паузу держать не надо.</div></div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы разбирали не приложение, а момент покупки. В конце я попрошу у вас четыре вещи по данным — список короткий, продиктую и продублирую письмом.» На титуле не задерживайся, паузу держать не надо.</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">«Мы провели глубокий аудит вашего продукта» — звучит как счёт за аудит. И не называй свою цифру доли пользователей: мы её не измеряли, знаменателя у нас нет. Процентов роста в этой колоде нет нигде, и это сделано осознанно.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А сколько именно пользуется? На чём основано „меньшинство“?»</i> — «Точную долю знаете только вы, мы её не измеряли и своё число не подставляли. Слово держится на другом: код показывают скриншотом, а значит открытий приложения меньше, чем покупок. Эта доля — первая строка базовой линии, которую мы зафиксируем до начала работ.»<br><i>«Откуда у вас наши данные?»</i> — Только открытые источники: карточки в App Store и RuStore, публичные отзывы, веб-архив сайта, нормативка. Ни одной внутренней цифры сети мы не видели.</div></div>
 </aside>
@@ -464,7 +429,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
         <div class="prob an" style="--d:190ms">
           <div class="i">02</div>
           <div><div class="q">Программа лояльности измеряет сумму покупок, а не частоту</div>
-          <div class="b">Порог 30 000 ₽ за три месяца не связан с тем, как часто покупатель приходит в магазин.</div></div>
+          <div class="b">Порог 30 000 ₽ за три месяца не связан с тем, как часто покупатель приходит в магазин.<span style="display:block;font-family:var(--mono);font-size:11px;line-height:1.5;color:var(--ink-3);margin-top:6px">условия программы на август 2026 — просим подтвердить</span></div></div>
         </div>
         <div class="prob an" style="--d:250ms">
           <div class="i">03</div>
@@ -495,7 +460,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
     <div class="kick an" style="--d:0ms">Проблема 1 · подробно</div>
     <h1 class="an" style="--d:60ms">В торговом зале нет связи,<br>поэтому штрихкод не отображается</h1>
     <div class="steps">
-      <div class="an" style="--d:130ms"><div class="n">01</div><div class="t">Человек у кассы</div><div class="d">подвальные помещения, глушилки; Wi-Fi для покупателей не предусмотрен</div></div>
+      <div class="an" style="--d:130ms"><div class="n">01</div><div class="t">Человек у кассы</div><div class="d">в зале нет устойчивой связи, гостевой Wi-Fi покупателю не предлагают</div></div>
       <div class="an" style="--d:180ms"><div class="n">02</div><div class="t">Холодный старт</div><div class="d">при запуске приложение обращается к серверу</div></div>
       <div class="an" style="--d:230ms"><div class="n">03</div><div class="t">«Что-то пошло не так»</div><div class="d">вместо штрихкода отображается ошибка</div></div>
       <div class="an hot" style="--d:280ms"><div class="n">04</div><div class="t">Скриншот в галерее</div><div class="d">покупатель сохраняет штрихкод и больше не открывает приложение</div></div>
@@ -514,7 +479,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <aside class="notes">
   <div class="nh">Слайд 03 · Проблема 1 · механика поломки</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Подвал, холодильники, металл, местами глушилки. Wi-Fi покупателю никто не раздаёт. Приложение на холодном старте первым делом идёт в сеть — и упирается.» Дальше честно: «покупатель уже нашёл решение сам, оно называется скриншот. И оно лучше нашего приложения по всем параметрам: мгновенно, без сети, никогда не ошибается.»</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй долю точек без связи — мы её не мерили. Говори «в зале», а не «в сорока процентах магазинов». И не вини операторов связи: чинить всё равно нам, на стороне приложения.</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй долю точек без связи — мы её не мерили. Говори «в зале», а не «в сорока процентах магазинов». Причины плохой связи (подвальные помещения, металл, глушилки) вслух подавай как версии, а не как факт: сеть мы не обмеряли, это покажет перепись точек. Если владелец скажет «у нас нормальная связь» — соглашайся и переводи на проверку: «тем лучше, перепись точек это и покажет; в отзывах жалуются именно на мобильный интернет». И не вини операторов связи: чинить всё равно нам, на стороне приложения.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Это отзывы про нас или вообще по рынку?»</i> — Эти две цитаты — про ваше приложение, RuStore, январь и март этого года. Ссылка внизу слайда, можно открыть прямо сейчас с телефона.</div></div>
 </aside>
 </section>
@@ -551,7 +516,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   <div class="nh">Слайд 04 · Чем это доказано</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Чтобы не спорить впечатлениями, мы собрали отзывы по всей категории и разложили жалобы по классам. Это количество отзывов, а не проценты: знаменатель у каждого стора свой, и подделывать его мы не стали.» Покажи на две жёлтые строки: «сорок один и одиннадцать — немного. Но это те, кто дошёл до того, чтобы сесть и написать отзыв именно про код.»</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не превращай эти числа в проценты и не говори «столько-то процентов жалоб» — поймает сразу. И не выдавай корпус за исследование именно вашей аудитории: это категория, ваши отзывы — только часть.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Почему вход на первом месте, а вы говорите про штрихкод?»</i> — «Вход — самый громкий класс по всей категории, и он у нас в работе: это четвёртый вопрос на последнем слайде. Но вход человек проходит один раз, а код показывает каждую покупку. Мы чиним то, что повторяется.»</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Почему вход на первом месте, а вы говорите про штрихкод?»</i> — «Вход — самый громкий класс по всей категории, и он у нас в работе — это второй этап в составе работ. Но вход человек проходит один раз, а код показывает каждую покупку. Мы чиним то, что повторяется.»</div></div>
 </aside>
 </section>
 
@@ -584,8 +549,8 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <aside class="notes">
   <div class="nh">Слайд 05 · Проблема 3 · находки у вас</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы это нашли, пока разбирали вашу карточку в сторе, и приносим как есть. Ни одно из трёх не стоит серьёзных денег, всё закрывается недели за две.» Про издателя — ровным техническим тоном: «Выпустим приложение с аккаунта вашего ООО. Карточка стартует с чистого листа: старый негатив и низкий рейтинг в неё не переезжают.» Про архив скажи коротко и без нажима: «в веб-архиве осталась старая акция по табаку вместе с адресами магазинов. По табаку правила строже, чем по пиву, — поэтому домен и предлагаем поднимать заново, а не из бэкапа.»</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Слова «нарушение» на этом слайде нет — и в речи быть не должно. Не «у вас проблема», а «вот что стоит закрыть до того, как это заметит кто-то другой». Не обещай, что на новой карточке сохранятся установки и рейтинг: она стартует с нуля, и пользователям нужно будет поставить приложение заново. Если спросят про установочную базу — есть второй путь, перенос существующей карточки на юрлицо: тогда bundle ID, установки и рейтинг переезжают, но вместе с ними и старые отзывы. Выбор за ними, оба варианта мы закрываем. Не предлагай поднять домен из бэкапа: на архивной странице табак. И не гадай, почему приложение выпущено с личного аккаунта — причина нас не касается, касается только перенос.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Почему вы вообще туда полезли?»</i> — «Потому что на этот домен ведут три обязательные ссылки из карточки App Store, и пока он отдаёт 403, правила ПМкоинов юридически нигде не опубликованы. Это первое, что открывает любой, кто захочет придраться — и первое, что открыли мы.»</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Слова «нарушение» на этом слайде нет — и в речи быть не должно. Не «у вас проблема», а «вот что стоит закрыть до того, как это заметит кто-то другой». Не обещай, что на новой карточке сохранятся установки и рейтинг: она стартует с нуля, и пользователям нужно будет поставить приложение заново. Не предлагай поднять домен из бэкапа: на архивной странице табак. И не гадай, почему приложение выпущено с личного аккаунта — причина нас не касается, касается только перенос.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А установки и рейтинг мы потеряем?»</i> — «Здесь два пути, и оба мы закрываем. Новая карточка с аккаунта ООО: чистый лист, старый негатив не переезжает, но и установки не переезжают — пользователей нужно перевести заново. Перенос существующей карточки на юрлицо: bundle ID, установки и рейтинг сохраняются, но вместе с ними остаются и старые отзывы. Что важнее — репутация с нуля или сохранённая база, — решаете вы.»<br><i>«Почему вы вообще туда полезли?»</i> — «Потому что на этот домен ведут три обязательные ссылки из карточки App Store, и пока он отдаёт 403, правила ПМкоинов юридически нигде не опубликованы. Это первое, что открывает любой, кто захочет придраться.»</div></div>
 </aside>
 </section>
 
@@ -593,7 +558,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense has-src">
-    <div class="kick an" style="--d:0ms">Этап 1 · не зависит от дополнительных данных</div>
+    <div class="kick an" style="--d:0ms">Этап 1 · стартует сразу, дополнительных данных не требует</div>
     <h1 class="an" style="--d:60ms">Карта — первый экран, штрихкод<br>доступен за два тапа без сети</h1>
     <div class="chips an" style="--d:120ms">
       <span class="chip ok">Юрстатус: допустима как есть</span>
@@ -634,10 +599,10 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   <div class="src">Работает там, где стоит имиджер. Лазерный сканер экран телефона не видит, поэтому сначала нужна <b>перепись сканеров</b>.</div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 06 · Этап 1 · ремонт</div>
+  <div class="nh">Слайд 06 · Этап 1</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Первые две недели — это исправление того, что уже заявлено, а не разработка нового. Первый экран — карта, код рисуется из локального хранилища, сеть для этого не нужна вообще.» Дальше жёстко и медленно: «ни один баннер, ни один опрос, ни одно окно с акцией не имеет права встать между иконкой и кодом. Это архитектурный запрет, а не пожелание дизайнера.»</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что заработает на всех кассах. Где стоит лазерный сканер, экран телефона не читается физически — сначала перепись типов сканеров, потом обещания. И не называй сроков сверх напечатанного: две недели — это про ремонт, «до месяца» — про весь блок целиком.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Сколько это стоит?»</i> — «Смету принесём отдельно и с расчётом: это низкая сложность и до месяца работ, от кассы не требуется ничего, франчайзи ничего не подписывает. Называть сумму до переписи сканеров было бы враньём.» Если спросят про результат: «доля показов кода без сети видна с первого дня — сегодня она нулевая по определению, потому что таких показов не бывает.»</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Сколько это стоит?»</i> — «Смету принесём отдельно и с расчётом: это низкая сложность и до месяца работ, от кассы не требуется ничего, франчайзи ничего не подписывает. Твёрдую цифру по первому этапу дадим в смете, в течение недели.» Если спросят про результат: «доля показов кода без сети видна с первого дня — сегодня она нулевая по определению, потому что таких показов не бывает.»</div></div>
 </aside>
 </section>
 
@@ -645,7 +610,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense xt has-src">
-    <div class="kick an" style="--d:0ms">Этап 2 · после получения данных по каналу начисления</div>
+    <div class="kick an" style="--d:0ms">Этап 4 · после получения данных по каналу начисления</div>
     <h1 class="an" style="--d:60ms">В механике METRO покупателя возвращает<br>обязательная ручная активация купона</h1>
     <div class="cols2">
       <div>
@@ -666,7 +631,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
         </ul>
       </div>
     </div>
-    <p class="panel an" style="--d:330ms"><b>Скидку на кассе не переносим.</b> У METRO её обеспечивает единый бэкенд одного юрлица, здесь — 794 точки разных владельцев. Выгода реализуется множителем начисления ПМкоинов, поэтому кассовое ПО и договоры с франчайзи не затрагиваются. Допущение одно: скан карты доходит до бэкенда управляющей компании — первый вопрос на слайде 09.</p>
+    <p class="panel an" style="--d:330ms"><b>Скидку на кассе не переносим.</b> У METRO её обеспечивает единый бэкенд одного юрлица, здесь — 794 точки разных владельцев. Выгода реализуется множителем начисления ПМкоинов, поэтому кассовое ПО и договоры с франчайзи не затрагиваются. Допущение одно: скан карты доходит до бэкенда управляющей компании. Это первое, что мы проверяем в ваших данных.</p>
     <div class="chips an" style="--d:380ms">
       <span class="chip ok">Юрстатус: начисление баллов прямого запрета не имеет</span>
       <span class="chip ok">От кассы ничего не нужно</span>
@@ -676,9 +641,9 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   <div class="src">Источник: <b>правила акции METRO «Активируйте специальные купоны в мобильном приложении!»</b> · МРЦ на пиво нет, только крепче 28% и игристое. Пиво не лицензируется, <b>ст. 18 ФЗ-171</b>.</div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 07 · Этап 2 · второй этап · разговор про деньги</div>
+  <div class="nh">Слайд 07 · Этап 4 · разговор про деньги</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«У METRO работает не скидка. Работает обязательный ручной тап: не активировал — купон не действует. Срок короткий, поэтому в приложение приходится возвращаться. Вот это мы и переносим.» Дальше про программу, медленно: «скидку франчайзи теряет прямо на продаже. Коины — обязательство сети, оно исполняется позже и не целиком.» И сразу: «скидку на кассе мы не трогаем вообще».</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй новые пороги, множитель и курс коина — даже примерно, даже «ну условно». Их считают по выгрузкам, а выгрузок у нас пока нет. Не обещай сроки по этому этапу: он упирается в канал начисления. И не говори «купоны» — у нас не купоны, а множитель.</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй новые пороги, множитель и курс коина — даже примерно, даже «ну условно». Их считают по выгрузкам, а выгрузок у нас пока нет. Не обещай сроки по четвёртому этапу: он упирается в канал начисления. И не говори «купоны» — у нас не купоны, а множитель.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Франчайзи придётся что-то менять на кассе или подписывать?»</i> — «Нет. Множитель живёт в вашем контуре: касса о нём не знает, кассовое ПО не трогаем, франчайзи ничего не подписывает. Именно поэтому мы отказались от скидки — она потребовала бы и того, и другого.»<br><i>«Вы предлагаете раздавать больше бонусов?»</i> — «Нет. Перестать платить за размер кошелька и начать платить за возврат.»</div></div>
 </aside>
 </section>
@@ -779,7 +744,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
     <div class="stages">
         <div class="stg an" style="--d:150ms">
           <div class="n">01</div>
-          <div><div class="t">Штрихкод и работа без сети</div><div class="c">карта первым экраном, код без сети, локальное хранение, запрет промежуточных окон, кнопка «Не приняли», перепись сканеров</div></div>
+          <div><div class="t">Штрихкод и работа без сети</div><div class="c">карта первым экраном, код без сети, кнопка «Не приняли», перепись сканеров, базовая линия и события аналитики</div></div>
         </div>
         <div class="stg an" style="--d:195ms">
           <div class="n">02</div>
@@ -795,7 +760,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
         </div>
         <div class="stg an" style="--d:330ms">
           <div class="n">05</div>
-          <div><div class="t">Аналитика и отчётность</div><div class="c">базовая линия письменно с датой, события запусков и показов кода, отчёт по точкам и частоте визитов</div></div>
+          <div><div class="t">Отчётность по точкам</div><div class="c">отчёт по точкам и частоте визитов, сводка по принятым этапам</div></div>
         </div>
     </div>
     <div class="paybar an" style="--d:390ms">
@@ -806,9 +771,9 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 </div></div>
 <aside class="notes">
   <div class="nh">Слайд 09 · Этапы и оплата</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Двадцать девять работ разбиты на пять этапов. Оплата поэтапная: аванс пятьсот тысяч при старте, дальше проценты по факту приёмки каждого этапа — вы платите за принятую работу, а не вперёд.» Дальше главное: «первый этап самодостаточен, он снимает проблему у кассы и ни от чего не зависит. Четвёртый упирается в данные по каналу начисления.» Распределение процентов и итоговую сумму принесём в смете в течение недели.</div></div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Двадцать девять работ разбиты на пять этапов. Оплата поэтапная: аванс пятьсот тысяч при старте, дальше проценты по факту приёмки каждого этапа — вы платите за принятую работу, а не вперёд.» Дальше главное: «первый этап самодостаточен, он снимает проблему у кассы и ни от чего не зависит. Четвёртый упирается в данные по каналу начисления.» Распределение процентов и итоговую сумму принесём в смете в течение недели.<br><b>Четыре запроса по данным — продиктуй в конце и продублируй письмом:</b> 1) как проходит начисление ПМкоинов, какое ПО на кассе, сколько из 794 точек закрыто этим каналом; 2) кто платит за кэшбэк и списание; 3) курс коина и объёмы по точкам за 3–6 месяцев; 4) что ломается при входе после переустановки. Без первого четвёртый этап не начинается.</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй итоговую сумму и проценты по этапам — их считают в смете, и это нормальный ответ. Не обещай сроки: на слайде их нет намеренно. И не говори, что все пять этапов обязательны — клиент выбирает, где остановиться.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Почему аванс именно пятьсот тысяч?»</i> — «Это вход в работу: команда садится на проект, снимаем базовую линию и начинаем первый этап. Дальше вы платите только за принятые этапы.»<br><i>«Можно взять только первый этап?»</i> — «Да, он самодостаточен и закрывает проблему у кассы. Остальные берутся отдельно, в любом порядке.»<br><i>«Сколько всего?»</i> — «Смета с расчётом по этапам — в течение недели. Называть цифру до переписи сканеров было бы враньём.»</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Почему аванс именно пятьсот тысяч?»</i> — «Это вход в работу: команда садится на проект, снимаем базовую линию и начинаем первый этап. Дальше вы платите только за принятые этапы.»<br><i>«Можно взять только первый этап?»</i> — «Да, он самодостаточен и закрывает проблему у кассы. Остальные берутся отдельно, в любом порядке.»<br><i>«Сколько всего?»</i> — «Смета с расчётом по этапам — в течение недели после встречи. По первому этапу цифра будет твёрдая. По четвёртому и пятому — расчёт уточняется, когда придут выгрузки по программе: без них там можно только гадать.»</div></div>
 </aside>
 </section>
 
@@ -830,7 +795,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 
 <style>
 .cwrap{display:contents}
-@media print{.cwrap{display:block;width:800px;height:450px;overflow:hidden}}
+@media print{.cwrap{display:block;width:770px;height:434px;overflow:hidden}}
 </style>
 
 <script>
