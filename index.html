@@ -51,9 +51,6 @@ html,body{height:100%;overflow:hidden;background:var(--surround);color:var(--ink
 .rail i{display:block;min-width:0;background:rgba(30,26,23,.11)}
 .rail i.past{background:rgba(156,107,18,.30)}
 .rail i.now{background:rgba(156,107,18,.85)}
-.src{position:absolute;left:96px;right:182px;bottom:32px;font-family:var(--mono);
-  font-size:11px;line-height:1.65;color:var(--ink-3);letter-spacing:.02em}
-.src b{font-weight:600;color:var(--ink-2)}
 
 /* ─────────── три типографических голоса ─────────── */
 .kick{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;
@@ -62,10 +59,6 @@ h1{font-size:51px;font-weight:800;letter-spacing:-.032em;line-height:1.07;max-wi
 h1.big{font-size:94px;line-height:.96;letter-spacing:-.043em}
 h1.sm{font-size:32px;line-height:1.16;letter-spacing:-.024em;max-width:none}
 h1 em{font-style:normal;color:var(--ochre)}
-.say{font-size:32px;font-weight:300;line-height:1.26;letter-spacing:-.018em;color:var(--ink);max-width:1000px}
-.say b{font-weight:700}
-.say em{font-style:normal;font-weight:700;color:var(--ochre)}
-.say-sub{font-size:16.5px;line-height:1.52;color:var(--ink-2);margin-top:13px;max-width:840px}
 
 /* ─────────── 01 · титул ─────────── */
 .title-pad{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;
@@ -78,75 +71,36 @@ h1 em{font-style:normal;color:var(--ochre)}
   text-transform:uppercase;margin-top:6px}
 .title-main{display:grid;grid-template-columns:1fr 336px;gap:0 56px;align-items:end}
 .title-lede{font-size:18.5px;line-height:1.62;color:var(--ink-2);padding-bottom:9px}
-.title-foot{display:grid;grid-template-columns:140px 1fr 250px;gap:0 40px;
+.title-foot{display:grid;grid-template-columns:140px 1fr;gap:0 40px;
   border-top:1px solid var(--hair);padding-top:20px;
   font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--ink-3);letter-spacing:.03em}
 .title-foot b{color:var(--ink);font-weight:600}
-.title-foot div:last-child{text-align:right}
 .hero{position:relative;display:flex;flex-direction:column;align-items:flex-start}
-#bcHero{display:block;width:360px;max-width:100%;
+#bcHero{display:block;width:300px;max-width:100%;
   -webkit-clip-path:inset(0 0 0 0);clip-path:inset(0 0 0 0)}
 #bcHero.wipe{-webkit-clip-path:inset(0 100% 0 0);clip-path:inset(0 100% 0 0)}
 #bcHero.draw{-webkit-clip-path:inset(0 0 0 0);clip-path:inset(0 0 0 0);
   transition:-webkit-clip-path .62s steps(26,end);transition:clip-path .62s steps(26,end)}
 #bcHero.dim #bcBars{opacity:.26;transition:opacity .34s var(--e)}
-.bc-err{position:absolute;left:16px;top:50%;margin-top:-46px;
+.bc-err{position:absolute;left:10px;top:50%;margin-top:-34px;
   border:1px solid var(--rust);background:var(--paper);
-  padding:12px 17px;font-family:var(--mono);font-size:12.5px;letter-spacing:.11em;
+  padding:9px 13px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--rust);opacity:0;transform:translateY(6px)}
 .bc-err.on{opacity:1;transform:translateY(0);transition:opacity .3s var(--e),transform .3s var(--e)}
-.note{margin-top:28px;padding-top:18px;border-top:1px solid var(--hair);
-  font-size:15.5px;line-height:1.5;color:var(--ink-3);max-width:540px}
-
-/* ─────────── шаги: линейка с засечками ─────────── */
-.steps{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border-top:1px solid var(--hair);
-  margin-top:34px}
-.steps>div{position:relative;padding:20px 34px 0 0}
-.steps>div::before{content:"";position:absolute;top:0;left:0;width:1px;height:9px;background:var(--hair-3)}
-.steps>div.hot::before{height:15px;width:2px;background:var(--rust)}
 .steps .n{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--ink-3);font-variant-numeric:tabular-nums}
 .steps>div.hot .n{color:var(--rust)}
 .steps .t{font-size:18px;font-weight:600;line-height:1.28;color:var(--ink);margin-top:13px;
   letter-spacing:-.014em}
-.steps .d{font-size:14.5px;line-height:1.45;color:var(--ink-2);margin-top:8px}
-
-/* ─────────── цитаты ─────────── */
-.quotes{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:32px;
-  border-top:1px solid var(--hair);padding-top:20px}
-.quotes q{display:block;font-size:17px;line-height:1.42;color:var(--ink);quotes:"«" "»"}
 .quotes .who{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--ink-3);margin-top:10px}
-
-/* ─────────── 04 · страница данных ─────────── */
-.datapage{display:grid;grid-template-columns:320px 1fr;gap:0 56px;align-items:start}
-.marg{margin-top:32px;border-top:1px solid var(--hair)}
-.marg div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
-  font-family:var(--mono);font-size:11px;line-height:1.5;color:var(--ink-3);letter-spacing:.03em;
-  padding:8px 0;border-bottom:1px solid var(--hair-2)}
-.marg div:last-child{border-bottom:0}
-.marg b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;flex:0 0 auto}
 #reviewChart{display:block;width:100%}
-.cap{display:flex;justify-content:space-between;align-items:baseline;gap:28px;margin-top:9px;
-  border-top:1px solid var(--hair);padding-top:9px}
-.cap .l{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-2)}
-.readout{margin-top:16px;padding-top:13px;border-top:1px solid var(--hair);
-  font-size:14px;line-height:1.45;color:var(--ink-2)}
-.readout b{color:var(--ink);font-weight:600}
 .cap .r{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ochre)}
-
-/* ─────────── 05 · находки ─────────── */
-.rows{margin-top:34px;border-top:1px solid var(--hair)}
 .rows .r{display:grid;grid-template-columns:142px 1fr;gap:0 44px;padding:19px 0;
   border-bottom:1px solid var(--hair-2)}
 .rows .r:last-child{border-bottom:0}
-.rows .ix{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--ink-3);padding-top:4px}
 .rows .tx{font-size:17.5px;line-height:1.46;color:var(--ink-2);max-width:880px}
 .rows .tx b{color:var(--ink);font-weight:600}
-.rows .ref{display:block;font-family:var(--mono);font-size:10.5px;line-height:1.6;
-  color:var(--ink-3);margin-top:9px;letter-spacing:.02em}
-.close{margin-top:26px;font-size:18px;line-height:1.5;color:var(--ink-2);max-width:920px}
 
 /* ─────────── таблица ─────────── */
 table.t{width:100%;border-collapse:collapse;margin-top:26px}
@@ -159,43 +113,8 @@ table.t td:last-child,table.t th:last-child{padding-right:0}
 table.t td.k{color:var(--ink);font-weight:600}
 table.t td b{color:var(--ink);font-weight:600}
 table.t td.was{color:var(--ink-3)}
-tr.sum td{border-top:1px solid var(--hair-3);border-bottom:0;padding-top:15px;padding-bottom:0}
-tr.sum td b{color:var(--ochre)}
-tr.sum td.k{color:var(--ink)}
 table.t tr:last-child td{border-bottom:0}
-
-/* ─────────── чипсы ─────────── */
-.chips{display:flex;gap:7px;margin-top:22px;flex-wrap:wrap}
-.chip{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  padding:7px 11px;border:1px solid var(--hair);color:var(--ink-2);white-space:nowrap}
-.chip.ok{border-color:rgba(74,90,38,.42);color:var(--olive)}
-.chip.warn{border-color:rgba(156,107,18,.42);color:var(--ochre)}
-
-/* ─────────── две колонки ─────────── */
-.cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:30px}
-.colhead{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--ink-3);padding-bottom:11px;border-bottom:1px solid var(--hair);margin-bottom:15px}
-.colhead.ok{color:var(--olive);border-bottom-color:rgba(74,90,38,.32)}
-.colhead.no{color:var(--rust);border-bottom-color:rgba(166,66,31,.28)}
 .colhead.on{color:var(--ochre);border-bottom-color:rgba(156,107,18,.32)}
-ul.pl{list-style:none}
-ul.pl li{padding:8px 0;border-bottom:1px solid var(--hair-2)}
-ul.pl li:last-child{border-bottom:0}
-ul.pl li b{display:block;font-size:17.5px;font-weight:600;line-height:1.3;color:var(--ink);
-  letter-spacing:-.01em}
-ul.pl li span{display:block;font-size:15px;line-height:1.42;color:var(--ink-3);margin-top:4px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:26px}
-.two p{font-size:16px;line-height:1.5;color:var(--ink-2)}
-.two p b{color:var(--ink);font-weight:600}
-
-/* ─────────── 08 · врезка ─────────── */
-.panel{margin-top:28px;background:var(--paper-2);padding:22px 26px;
-  font-size:15px;line-height:1.52;color:var(--ink-2)}
-.panel b{color:var(--ink);font-weight:600}
-.ask .i{font-size:32px;font-weight:200;line-height:.9;color:var(--ochre);
-  font-variant-numeric:tabular-nums;letter-spacing:-.03em}
-.ask .q{font-size:18.5px;font-weight:600;line-height:1.3;color:var(--ink);letter-spacing:-.012em}
-.ask .b{grid-column:2;font-size:14.5px;line-height:1.42;color:var(--ink-3);margin-top:5px}
 
 /* ─────────── плотный регистр: слайды с большим объёмом ─────────── */
 .pad.dense{padding:56px 96px 62px}
@@ -256,17 +175,6 @@ ul.pl li span{display:block;font-size:15px;line-height:1.42;color:var(--ink-3);m
 .pad.dense.xt .chips{margin-top:11px}
 .pad.dense.xt .colhead{margin-bottom:10px}
 
-/* ─────────── 02 · три проблемы ─────────── */
-.probs{display:grid;grid-template-columns:1fr 360px;gap:0 56px;margin-top:26px;align-items:center}
-.prob{display:grid;grid-template-columns:58px 1fr;gap:0 20px;padding:15px 0;
-  border-bottom:1px solid var(--hair-2)}
-.pl2 .prob:first-child{padding-top:0}
-.pl2 .prob:last-child{border-bottom:0}
-.prob .i{font-size:32px;font-weight:200;line-height:.9;color:var(--ochre);
-  font-variant-numeric:tabular-nums;letter-spacing:-.03em}
-.prob .q{font-size:19px;font-weight:600;line-height:1.28;color:var(--ink);letter-spacing:-.012em}
-.prob .b{font-size:15px;line-height:1.44;color:var(--ink-2);margin-top:6px}
-
 /* ─────────── 08 · состав работ ─────────── */
 .works{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;margin-top:20px}
 .wcol{display:flex;flex-direction:column;gap:15px}
@@ -278,7 +186,6 @@ ul.pl li span{display:block;font-size:15px;line-height:1.42;color:var(--ink-3);m
 .wnote{margin-top:16px;padding-top:12px;border-top:1px solid var(--hair);
   font-size:13.5px;line-height:1.45;color:var(--ink-3)}
 .wnote b{color:var(--ink-2);font-weight:600}
-.lead8{margin-top:12px;font-size:15px;line-height:1.45;color:var(--ink-2);max-width:900px}
 .wcount{font-size:32px;font-weight:200;color:var(--ochre);letter-spacing:-.03em;
   font-variant-numeric:tabular-nums;line-height:1}
 
@@ -291,10 +198,25 @@ ul.pl li span{display:block;font-size:15px;line-height:1.42;color:var(--ink-3);m
   font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 .stg .t{font-size:21.5px;font-weight:600;line-height:1.25;color:var(--ink);letter-spacing:-.015em}
 .stg .c{font-size:16.5px;line-height:1.42;color:var(--ink-2);margin-top:6px}
-.paybar{margin-top:20px;padding-top:16px;border-top:1px solid var(--hair-3)}
-.paybar .l{font-size:22px;font-weight:600;line-height:1.35;color:var(--ink);letter-spacing:-.015em}
-.paybar .l em{font-style:normal;color:var(--ochre)}
-.paybar .s{font-size:16px;line-height:1.45;color:var(--ink-2);margin-top:9px}
+
+/* ─────────── проблема → решение ─────────── */
+.ps{display:grid;grid-template-columns:1fr 1fr;gap:0 54px;margin-top:20px}
+.pshead{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  padding-bottom:10px;border-bottom:1px solid var(--hair);margin-bottom:14px}
+.pshead.bad{color:var(--rust);border-bottom-color:rgba(166,66,31,.3)}
+.pshead.good{color:var(--olive);border-bottom-color:rgba(74,90,38,.35)}
+ul.plain{list-style:none}
+ul.plain li{font-size:17px;line-height:1.44;color:var(--ink-2);padding:5px 0 5px 17px;position:relative}
+ul.plain li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:1px;background:var(--hair-3)}
+ul.plain li b{color:var(--ink);font-weight:600}
+.qbox{margin-top:14px;padding-left:16px;border-left:2px solid var(--hair-3)}
+.qbox q{display:block;font-size:16px;line-height:1.42;color:var(--ink);quotes:"«" "»"}
+.qbox .who{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+.resline{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair-3);
+  font-size:20px;font-weight:600;line-height:1.35;color:var(--ink);letter-spacing:-.012em}
+.resline em{font-style:normal;color:var(--ochre)}
+.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 44px;margin-top:22px}
 
 /* ─────────── появление ─────────── */
 body.js .an{opacity:0;transform:translateY(10px)}
@@ -389,394 +311,351 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   <div class="title-pad">
     <div class="mark an" style="--d:0ms">
       <i class="pm-mark" role="img" aria-label="Пивоман"></i>
-      <div>
-        <div class="nm">Пивоман</div>
-        <div class="sm">794 магазина · 34 города</div>
-      </div>
+      <div><div class="nm">Пивоман</div><div class="sm">794 магазина · 34 города</div></div>
     </div>
     <div class="title-main">
       <div>
-        <div class="kick an" style="--d:70ms">Мобильное приложение сети · разбор и предложение</div>
+        <div class="kick an" style="--d:70ms">Мобильное приложение сети · что не работает и что с этим делать</div>
         <h1 class="big an" style="--d:130ms">Приложением<br>пользуется<br>меньшинство</h1>
       </div>
-      <p class="title-lede an" style="--d:210ms">Причина не в наборе функций: в момент покупки приложение не работает.</p>
+      <p class="title-lede an" style="--d:210ms">Причина не в том, что в нём мало функций. В момент покупки оно просто не работает.</p>
     </div>
     <div class="title-foot an" style="--d:280ms">
       <div><b>Август 2026</b></div>
-      <div>Разбор по открытым источникам<br>и по вашей карточке в App Store и RuStore</div>
-      <div>25 срезов разведки<br>1908 отзывов · 58 механик</div>
+      <div>Разобрали приложение, отзывы покупателей и вашу карточку в App Store и RuStore</div>
     </div>
   </div>
 </div></div>
 <aside class="notes">
   <div class="nh">Слайд 01 · Титул</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы разбирали не приложение, а момент покупки. В конце я попрошу у вас четыре вещи по данным — список короткий, продиктую и продублирую письмом.» На титуле не задерживайся, паузу держать не надо.</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">«Мы провели глубокий аудит вашего продукта» — звучит как счёт за аудит. И не называй свою цифру доли пользователей: мы её не измеряли, знаменателя у нас нет. Процентов роста в этой колоде нет нигде, и это сделано осознанно.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А сколько именно пользуется? На чём основано „меньшинство“?»</i> — «Точную долю знаете только вы, мы её не измеряли и своё число не подставляли. Слово держится на другом: код показывают скриншотом, а значит открытий приложения меньше, чем покупок. Эта доля — первая строка базовой линии, которую мы зафиксируем до начала работ.»<br><i>«Откуда у вас наши данные?»</i> — Только открытые источники: карточки в App Store и RuStore, публичные отзывы, веб-архив сайта, нормативка. Ни одной внутренней цифры сети мы не видели.</div></div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы разбирали не приложение вообще, а один момент — когда человек стоит у кассы. Сейчас покажу четыре вещи, которые там ломаются, и что мы с каждой сделаем.» На титуле не задерживайся.</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не говори «мы провели аудит» — звучит как счёт за аудит. Не называй свою цифру доли пользователей: мы её не измеряли.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Откуда вы это взяли?»</i> — «Из открытых источников: ваша карточка в App Store и RuStore, отзывы покупателей, сайт. Внутренних данных сети мы не видели.»</div></div>
 </aside>
 </section>
 
-<!-- ═══════════ 02 · ТРИ ПРОБЛЕМЫ ═══════════ -->
+<!-- ═══════════ 02 · ЧЕТЫРЕ ПРОБЛЕМЫ ═══════════ -->
 <section class="slide">
 <div class="cwrap"><div class="canvas">
-  <div class="pad tight">
-    <div class="kick an" style="--d:0ms">Основные проблемы</div>
-    <h1 class="an" style="--d:60ms">Три основные проблемы приложения</h1>
-    <div class="probs">
-      <div class="pl2">
-        <div class="prob an" style="--d:130ms">
-          <div class="i">01</div>
-          <div><div class="q">В момент покупки приложение не работает</div>
-          <div class="b">В торговом зале нет связи, штрихкод не отображается. Покупатель пользуется скриншотом из галереи и приложение не открывает.</div></div>
-        </div>
-        <div class="prob an" style="--d:190ms">
-          <div class="i">02</div>
-          <div><div class="q">Программа лояльности измеряет сумму покупок, а не частоту</div>
-          <div class="b">Порог 30 000 ₽ за три месяца не связан с тем, как часто покупатель приходит в магазин.<span style="display:block;font-family:var(--mono);font-size:11px;line-height:1.5;color:var(--ink-3);margin-top:6px">условия программы на август 2026 — просим подтвердить</span></div></div>
-        </div>
-        <div class="prob an" style="--d:250ms">
-          <div class="i">03</div>
-          <div><div class="q">Правила программы юридически не опубликованы</div>
-          <div class="b">Домен tdpivoman.ru отвечает ошибкой 403. На него ведут три обязательные ссылки из карточки App Store.</div></div>
-        </div>
-      </div>
-      <div class="hero">
-        <svg id="bcHero" viewBox="0 0 360 168" aria-label="Штрихкод карты"></svg>
-        <div class="bc-err">Что-то пошло не так</div>
-      </div>
+  <div class="pad">
+    <div class="kick an" style="--d:0ms">Что не так сейчас</div>
+    <h1 class="an" style="--d:60ms">Четыре проблемы. Дальше по каждой — решение.</h1>
+    <div class="stages">
+      <div class="stg an" style="--d:140ms"><div class="n">01</div>
+        <div><div class="t">У кассы не показать карту</div>
+        <div class="c">В магазине нет интернета, и штрихкод на экране не появляется.</div></div></div>
+      <div class="stg an" style="--d:190ms"><div class="n">02</div>
+        <div><div class="t">В приложение не войти</div>
+        <div class="c">Код по СМС не приходит, а вход слетает после переустановки.</div></div></div>
+      <div class="stg an" style="--d:240ms"><div class="n">03</div>
+        <div><div class="t">Правила программы нигде не опубликованы</div>
+        <div class="c">Сайт с правилами не открывается, а приложение выпущено на частное лицо.</div></div></div>
+      <div class="stg an" style="--d:290ms"><div class="n">04</div>
+        <div><div class="t">Программа лояльности злит покупателей</div>
+        <div class="c">По отзывам покупателей, чтобы держать свой процент, надо выкупать на 30 000 ₽ за три месяца.</div></div></div>
     </div>
-    <p class="note an" style="--d:320ms">Три плана мы собирали параллельно, каждый не видел выводов двух других. Причиной ни один не назвал набор функций.</p>
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 02 · Три проблемы · ключевой</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы разбирали не приложение, а момент покупки. Нашли три вещи. Первая объясняет, почему приложением пользуется меньшинство, — и её же чинить быстрее всего.» Дальше покажи на штрихкод: «вот действие, которое человек повторяет при каждой покупке. Его не надо придумывать, его надо починить.» Пауза перед «оно сломано». Остальные два пункта проговори быстро — они раскрыты на слайдах дальше.</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что починка кода поднимет продажи или средний чек: мы этого не измеряли. Не называй свою цифру доли пользователей — знаменателя у нас нет. И не начинай спорить по второму и третьему пункту прямо здесь, скажи «дойдём».</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«У нас карта работает, люди её показывают»</i> — «Показывают. Скриншотом из галереи. Карта в чеке есть, а открытия приложения нет. Проверяется одним запросом к вашей аналитике: сколько сканов карты и сколько запусков приложения за тот же день.»<br><i>«Что за три плана внизу?»</i> — «Три плана работ, которые мы собирали параллельно: каждый не видел выводов двух других. Совпали не формулировки, а вывод.»</div></div>
+  <div class="nh">Слайд 02 · Четыре проблемы</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Вот четыре вещи. Первые две — про то, что человек физически не может сделать. Третья — про то, что его злит. Четвёртая — про бумаги.» Не разбирай их здесь, скажи: «дальше по каждой отдельно, и сразу что мы делаем».</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не углубляйся ни в одну из четырёх — на это есть свои слайды. Не говори «это всё критично»: первые две действительно мешают покупателю, четвёртая — вопрос бумаг.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А что, всё так плохо?»</i> — «Нет. Приложение сделано, люди его поставили. Ломается конкретно то, что нужно в момент покупки, — вот это и чиним.»</div></div>
 </aside>
 </section>
 
-<!-- ═══════════ 03 · МЕХАНИКА ПОЛОМКИ ═══════════ -->
-<section class="slide">
-<div class="cwrap"><div class="canvas">
-  <div class="pad dense tight has-src">
-    <div class="kick an" style="--d:0ms">Проблема 1 · подробно</div>
-    <h1 class="an" style="--d:60ms">В торговом зале нет связи,<br>поэтому штрихкод не отображается</h1>
-    <div class="steps">
-      <div class="an" style="--d:130ms"><div class="n">01</div><div class="t">Человек у кассы</div><div class="d">в зале нет устойчивой связи, гостевой Wi-Fi покупателю не предлагают</div></div>
-      <div class="an" style="--d:180ms"><div class="n">02</div><div class="t">Холодный старт</div><div class="d">при запуске приложение обращается к серверу</div></div>
-      <div class="an" style="--d:230ms"><div class="n">03</div><div class="t">«Что-то пошло не так»</div><div class="d">вместо штрихкода отображается ошибка</div></div>
-      <div class="an hot" style="--d:280ms"><div class="n">04</div><div class="t">Скриншот в галерее</div><div class="d">покупатель сохраняет штрихкод и больше не открывает приложение</div></div>
-    </div>
-    <div class="an" style="--d:350ms;margin-top:26px">
-      <p class="say">Карта проходит по чеку, но <b>приложение при этом не запускается</b>.</p>
-      <p class="say-sub">Пока штрихкод хранится в галерее, число запусков приложения не связано с числом покупок.</p>
-    </div>
-    <div class="quotes an" style="--d:420ms">
-      <div><q>Через мобильный интернет оно не работает</q><span class="who">RuStore · 21 января 2026</span></div>
-      <div><q>С домашнего вай-фая работает. С мобильного интернета вообще не грузит</q><span class="who">RuStore · 20 марта 2026</span></div>
-    </div>
-  </div>
-  <div class="src">Отзывы о приложении «Пивоман», RuStore · <b>rustore.ru/catalog/app/com.pivoman.pivoman/reviews</b></div>
-</div></div>
-<aside class="notes">
-  <div class="nh">Слайд 03 · Проблема 1 · механика поломки</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Подвал, холодильники, металл, местами глушилки. Wi-Fi покупателю никто не раздаёт. Приложение на холодном старте первым делом идёт в сеть — и упирается.» Дальше честно: «покупатель уже нашёл решение сам, оно называется скриншот. И оно лучше нашего приложения по всем параметрам: мгновенно, без сети, никогда не ошибается.»</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй долю точек без связи — мы её не мерили. Говори «в зале», а не «в сорока процентах магазинов». Причины плохой связи (подвальные помещения, металл, глушилки) вслух подавай как версии, а не как факт: сеть мы не обмеряли, это покажет перепись точек. Если владелец скажет «у нас нормальная связь» — соглашайся и переводи на проверку: «тем лучше, перепись точек это и покажет; в отзывах жалуются именно на мобильный интернет». И не вини операторов связи: чинить всё равно нам, на стороне приложения.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Это отзывы про нас или вообще по рынку?»</i> — Эти две цитаты — про ваше приложение, RuStore, январь и март этого года. Ссылка внизу слайда, можно открыть прямо сейчас с телефона.</div></div>
-</aside>
-</section>
-
-<!-- ═══════════ 04 · ДОКАЗАТЕЛЬНАЯ БАЗА ═══════════ -->
-<section class="slide">
-<div class="cwrap"><div class="canvas">
-  <div class="pad has-src">
-    <div class="datapage">
-      <div>
-        <div class="kick an" style="--d:0ms">Корпус 1908 отзывов<br>о приложениях категории</div>
-        <h1 class="sm an" style="--d:60ms">На что жалуются пользователи приложений категории</h1>
-        <div class="marg an" style="--d:130ms">
-          <div><span>срезов разведки</span><b>25</b></div>
-          <div><span>фактов со ссылками</span><b>~700</b></div>
-          <div><span>механик проработано</span><b>58</b></div>
-          <div><span>разборов скептика</span><b>58</b></div>
-          <div><span>механик убито</span><b>13</b></div>
-          <div><span>цифр без источника вычищено</span><b>14</b></div>
-        </div>
-      </div>
-      <div>
-        <svg id="reviewChart" viewBox="0 0 712 306" aria-label="Классы жалоб по количеству отзывов"></svg>
-        <div class="cap an" style="--d:200ms">
-          <div class="l">Это количество отзывов, не проценты.</div>
-          <div class="r"><span style="color:var(--ochre)">охра — проблема 1</span> &nbsp;·&nbsp; <span style="color:var(--olive)">олива — вход, второй этап</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="readout an" style="--d:250ms"><b>Вход — самая громкая боль категории, и она у нас во втором этапе.</b> Штрихкод и офлайн посчитаны по прямой формулировке: ту же проблему чаще описывают как «сетевую ошибку», поэтому класс занижен. Вход проходят один раз, штрихкод показывают при каждой покупке.</div>
-  </div>
-  <div class="src">Источник: <b>App Store RU</b> (RSS-фид, 10 приложений) и <b>Google Play RU</b> (4 сети), плюс <b>RuStore</b></div>
-</div></div>
-<aside class="notes">
-  <div class="nh">Слайд 04 · Чем это доказано</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Чтобы не спорить впечатлениями, мы собрали отзывы по всей категории и разложили жалобы по классам. Это количество отзывов, а не проценты: знаменатель у каждого стора свой, и подделывать его мы не стали.» Покажи на две жёлтые строки: «сорок один и одиннадцать — немного. Но это те, кто дошёл до того, чтобы сесть и написать отзыв именно про код.»</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не превращай эти числа в проценты и не говори «столько-то процентов жалоб» — поймает сразу. И не выдавай корпус за исследование именно вашей аудитории: это категория, ваши отзывы — только часть.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Почему вход на первом месте, а вы носитесь с сорока одним отзывом?»</i> — Это главный вопрос слайда, ответь по трём пунктам. «Первое: вход мы забираем, это второй этап, шесть работ — самую громкую боль категории мы не обходим. Второе: сорок один — это те, кто написал слово «штрихкод». Ту же проблему обычно описывают как «сетевую ошибку» или «не грузит», и она рассыпается по другим классам, так что счёт занижен. Третье и главное: вход человек проходит один раз, а штрихкод показывает при каждой покупке — поэтому починка входа возвращает человека в приложение однажды, а починка кода делает это привычкой.»<br>Если попросят доказать недосчёт — вернись на слайд 03: в обеих цитатах нет слова «офлайн», а обе ровно про него.</div></div>
-</aside>
-</section>
-
-<!-- ═══════════ 05 · ЧТО НАШЛИ У ВАС ═══════════ -->
+<!-- ═══════════ 03 · КАРТА У КАССЫ ═══════════ -->
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Проблема 3 · нашли, пока разбирали вашу карточку в сторе</div>
-    <h1 class="an" style="--d:60ms">Три вопроса, которые стоит закрыть<br>в ближайшее время</h1>
-    <div class="rows">
-      <div class="r an" style="--d:140ms">
-        <div class="ix">Домен</div>
-        <div class="tx"><b>tdpivoman.ru отдаёт 403.</b> На него ведут все три обязательные ссылки карточки App Store. Правила ПМкоинов юридически не опубликованы
-          <span class="ref">curl -I https://tdpivoman.ru → 403 · поле sellerUrl в itunes lookup</span></div>
-      </div>
-      <div class="r an" style="--d:200ms">
-        <div class="ix">Издатель</div>
-        <div class="tx"><b>В App Store приложение выпущено с личного аккаунта физического лица, а не ООО.</b> Выпустим карточку с аккаунта вашего ООО — она стартует с чистого листа, старые негативные отзывы и рейтинг на неё не переносятся
-          <span class="ref">поля sellerName и artistName в itunes lookup · App Review Guidelines 2.1(a), 5.1.1(i)</span></div>
-      </div>
-      <div class="r an" style="--d:260ms">
-        <div class="ix">Веб-архив</div>
-        <div class="tx"><b>В архиве сайта осталась страница со скидкой на всю табачную продукцию</b> и списком адресов магазинов Омска. По табаку ограничение строже, чем по пиву: ст. 16 ФЗ-15
-          <span class="ref">web.archive.org/…/tdpivoman.ru/advert/aktsiya-na-tabak/</span></div>
-      </div>
-    </div>
-    <p class="close an" style="--d:330ms">Все три закрываются в направлении «Сторы и репутация» — это отдельный этап программы. Домен рекомендуем поднять заново, без восстановления из архива.</p>
-  </div>
-</div></div>
-<aside class="notes">
-  <div class="nh">Слайд 05 · Проблема 3 · находки у вас</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы это нашли, пока разбирали вашу карточку в сторе, и приносим как есть. Все три закрываем в направлении «Сторы и репутация» — это отдельный этап.» Про издателя — ровным техническим тоном: «Выпустим приложение с аккаунта вашего ООО. Карточка стартует с чистого листа: старый негатив и низкий рейтинг в неё не переезжают.» Про архив скажи коротко и без нажима: «в веб-архиве осталась старая акция по табаку вместе с адресами магазинов. По табаку правила строже, чем по пиву, — поэтому домен и предлагаем поднимать заново, а не из бэкапа.»</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Слова «нарушение» на этом слайде нет — и в речи быть не должно. Не «у вас проблема», а «вот что стоит закрыть до того, как это заметит кто-то другой». Не обещай, что на новой карточке сохранятся установки и рейтинг: она стартует с нуля, и пользователям нужно будет поставить приложение заново. Не предлагай поднять домен из бэкапа: на архивной странице табак. И не гадай, почему приложение выпущено с личного аккаунта — причина нас не касается, касается только перенос.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А установки и рейтинг мы потеряем?»</i> — «Здесь два пути, и оба мы закрываем. Новая карточка с аккаунта ООО: чистый лист, старый негатив не переезжает, но и установки не переезжают — пользователей нужно перевести заново. Перенос существующей карточки на юрлицо: bundle ID, установки и рейтинг сохраняются, но вместе с ними остаются и старые отзывы. Что важнее — репутация с нуля или сохранённая база, — решаете вы.»<br><i>«Почему вы вообще туда полезли?»</i> — «Потому что на этот домен ведут три обязательные ссылки из карточки App Store, и пока он отдаёт 403, правила ПМкоинов юридически нигде не опубликованы. Это первое, что открывает любой, кто захочет придраться.»</div></div>
-</aside>
-</section>
-
-<!-- ═══════════ 06 · ЭТАП 1 · РЕМОНТ ═══════════ -->
-<section class="slide">
-<div class="cwrap"><div class="canvas">
-  <div class="pad dense has-src">
-    <div class="kick an" style="--d:0ms">Этап 1 · стартует сразу, дополнительных данных не требует</div>
-    <h1 class="an" style="--d:60ms">Карта — первый экран, штрихкод<br>доступен за два тапа без сети</h1>
-    <div class="chips an" style="--d:120ms">
-      <span class="chip ok">Юрстатус: допустима как есть</span>
-      <span class="chip ok">От кассы ничего не нужно</span>
-      <span class="chip ok">Франчайзи ничего не подписывает</span>
-      <span class="chip">Этап 1 программы работ</span>
-    </div>
-    <table class="t">
-      <thead><tr><th style="width:210px">Шаг</th><th style="width:36%">Сейчас</th><th>Должно быть</th></tr></thead>
-      <tbody>
-        <tr>
-          <td class="k">Открыть приложение</td>
-          <td class="was an" style="--d:230ms">«Что-то пошло не так» — в зале нет связи</td>
-          <td class="an" style="--d:430ms"><b>тап по иконке, сразу экран «Карта»</b></td>
-        </tr>
-        <tr>
-          <td class="k">Дойти до штрихкода</td>
-          <td class="was an" style="--d:280ms">невозможно; человек уходит в галерею</td>
-          <td class="an" style="--d:480ms"><b>штрихкод строится из локального хранилища</b></td>
-        </tr>
-        <tr class="sum">
-          <td class="k an" style="--d:680ms">Итого до штрихкода</td>
-          <td class="an" style="--d:680ms">без сети не дойти</td>
-          <td class="an" style="--d:680ms"><b>2 тапа, сеть не нужна</b></td>
-        </tr>
-        <tr>
-          <td class="k">Если карту не приняли</td>
-          <td class="was an" style="--d:330ms">—</td>
-          <td class="an" style="--d:530ms"><b>кнопка «Не приняли» с выбором точки</b> — жалоба уходит адресно</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="two">
-      <p class="an" style="--d:760ms"><b>Между иконкой приложения и штрихкодом не должно быть промежуточных окон.</b> Требование фиксируется на уровне архитектуры.</p>
-      <p class="an" style="--d:810ms"><b>Контрольный показатель:</b> доля показов штрихкода при отсутствии сети. Сейчас она равна нулю.</p>
-    </div>
-  </div>
-  <div class="src">Работает там, где стоит имиджер. Лазерный сканер экран телефона не видит, поэтому сначала нужна <b>перепись сканеров</b>.</div>
-</div></div>
-<aside class="notes">
-  <div class="nh">Слайд 06 · Этап 1</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Первый этап — это то, что в приложении уже заявлено, но не работает. Первый экран — карта, код рисуется из локального хранилища, сеть для этого не нужна вообще.» Дальше жёстко и медленно: «ни один баннер, ни один опрос, ни одно окно с акцией не имеет права встать между иконкой и кодом. Это архитектурный запрет, а не пожелание дизайнера.»</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что заработает на всех кассах. Где стоит лазерный сканер, экран телефона не читается физически — сначала перепись типов сканеров, потом обещания. Сроков в колоде нет намеренно — они идут в смете вместе со стоимостью. Если давят: «сроки по этапам будут в смете, через неделю после встречи». Не называй «низкую сложность» и «пару недель» — это чужой аргумент за скидку, а не наш.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Сколько это стоит?»</i> — «Смету принесём отдельно и с расчётом по этапам. От кассы не требуется ничего, франчайзи ничего не подписывает. Твёрдую цифру по первому этапу дадим в смете, в течение недели.» Если спросят про результат: «доля показов кода без сети видна с первого дня — сегодня она нулевая по определению, потому что таких показов не бывает.»</div></div>
-</aside>
-</section>
-
-<!-- ═══════════ 07 · ЭТАП 2 · ДВИГАТЕЛЬ ЧАСТОТЫ ═══════════ -->
-<section class="slide">
-<div class="cwrap"><div class="canvas">
-  <div class="pad dense xt has-src">
-    <div class="kick an" style="--d:0ms">Этап 4 · после получения данных по каналу начисления</div>
-    <h1 class="an" style="--d:60ms">В механике METRO покупателя возвращает<br>обязательная ручная активация купона</h1>
-    <div class="cols2">
+    <div class="kick an" style="--d:0ms">Проблема 1 · у кассы не показать карту</div>
+    <h1 class="an" style="--d:60ms">В магазине нет интернета — и штрихкод не появляется</h1>
+    <div class="ps">
       <div>
-        <div class="colhead an" style="--d:110ms">Механика METRO</div>
-        <ul class="pl">
-          <li class="an" style="--d:150ms"><b>Тапнуть «Активировать»</b><span>купон привязывается к карте, без тапа не работает</span></li>
-          <li class="an" style="--d:185ms"><b>Срок действия ≤ 14 дней</b><span>по истечении купон сгорает</span></li>
-          <li class="an" style="--d:220ms"><b>Повторный вход</b><span>чтобы активировать новые купоны, нужно снова открыть приложение</span></li>
+        <div class="pshead bad an" style="--d:120ms">Что происходит сейчас</div>
+        <ul class="plain">
+          <li class="an" style="--d:160ms">Человек открывает приложение у кассы, а оно первым делом лезет в интернет.</li>
+          <li class="an" style="--d:200ms">В зале связи нет. Вместо кода — ошибка, а сзади очередь.</li>
+          <li class="an" style="--d:240ms">Человек один раз фотографирует код и дальше показывает картинку из галереи.</li>
+          <li class="an" style="--d:280ms"><b>Приложение он больше не открывает.</b></li>
         </ul>
+        <div class="qbox an" style="--d:320ms">
+          <q>Через мобильный интернет оно не работает</q>
+          <span class="who">отзыв о вашем приложении · RuStore</span>
+        </div>
+        <div class="hero an" style="--d:360ms;margin-top:10px">
+          <svg id="bcHero" viewBox="0 0 300 84" aria-label="Штрихкод карты"></svg>
+          <div class="bc-err">Что-то пошло не так</div>
+        </div>
       </div>
       <div>
-        <div class="colhead on an" style="--d:130ms">Что меняем в программе</div>
-        <ul class="pl">
-          <li class="an" style="--d:170ms"><b>Учитывать визиты вместо суммы покупок</b><span>не более одного зачёта в день</span></li>
-          <li class="an" style="--d:205ms"><b>Не обнулять накопленное</b><span>при смене расчётного окна счёт продолжается</span></li>
-          <li class="an" style="--d:240ms"><b>Изменять множитель начисления, а не скидку</b><span>скидка вычитается из маржи франчайзи в момент продажи; коины — обязательство сети с отложенным и неполным исполнением</span></li>
-          <li class="an" style="--d:275ms"><b>Верхний статус даёт доступ, а не скидку</b><span>редкий сорт, ранний доступ — без нагрузки на маржу</span></li>
+        <div class="pshead good an" style="--d:140ms">Что сделаем</div>
+        <ul class="plain">
+          <li class="an" style="--d:180ms">Карта станет первым экраном приложения.</li>
+          <li class="an" style="--d:220ms">Код будет рисоваться прямо на телефоне — интернет для этого не нужен.</li>
+          <li class="an" style="--d:260ms">От нажатия на значок приложения до кода — ничего лишнего: ни рекламы, ни опросов.</li>
+          <li class="an" style="--d:300ms">Появится кнопка «Не приняли карту» — жалоба уйдёт сразу с адресом магазина.</li>
         </ul>
       </div>
     </div>
-    <p class="panel an" style="--d:330ms"><b>Коины остаются, скидку на кассе не добавляем.</b> У METRO купон режет цену прямо в чеке — там одна компания и одна касса на всю сеть. У вас 794 точки разных владельцев: такую скидку оплачивал бы франчайзи из своей выручки, и её пришлось бы прошивать в каждую кассу. Мы вместо этого поднимаем ставку начисления коинов: их начисляет сеть после покупки, касса об этом не знает. Работает везде, где скан карты доходит до ваших серверов — это первое, что проверяем.</p>
-    <div class="chips an" style="--d:380ms">
-      <span class="chip ok">Юрстатус: начисление баллов прямого запрета не имеет</span>
-      <span class="chip ok">От кассы ничего не нужно</span>
-      <span class="chip warn">Упирается в канал начисления</span>
-    </div>
+    <div class="resline an" style="--d:400ms">Открыл приложение — код на экране. <em>Работает даже там, где связи нет вообще.</em></div>
   </div>
-  <div class="src">Источник: <b>правила акции METRO «Активируйте специальные купоны в мобильном приложении!»</b> · МРЦ на пиво нет, только крепче 28% и игристое. Пиво не лицензируется, <b>ст. 18 ФЗ-171</b>.</div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 07 · Этап 4 · разговор про деньги</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«У METRO работает не скидка. Работает обязательный ручной тап: не активировал — купон не действует. Срок короткий, поэтому в приложение приходится возвращаться. Вот это мы и переносим.» Дальше про программу, медленно: «скидку франчайзи теряет прямо на продаже. Коины — обязательство сети, оно исполняется позже и не целиком.» И сразу сними главное опасение: «коины никто не отменяет, выгода для покупателя остаётся — мы меняем правила вокруг неё, а не убираем её».</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй новые пороги, множитель и курс коина — даже примерно, даже «ну условно». Их считают по выгрузкам, а выгрузок у нас пока нет. Не обещай сроки по четвёртому этапу: он упирается в канал начисления. И не говори «купоны» — у нас не купоны, а множитель.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Франчайзи придётся что-то менять на кассе или подписывать?»</i> — «Нет. Множитель живёт в вашем контуре: касса о нём не знает, кассовое ПО не трогаем, франчайзи ничего не подписывает. Именно поэтому мы отказались от скидки — она потребовала бы и того, и другого.»<br><i>«Вы предлагаете раздавать больше бонусов?»</i> — «Нет. Перестать платить за размер кошелька и начать платить за возврат.»<br><i>«А наши 5% — это что, отменяется?»</i> — «Нет. Пять процентов остаются как ставка начисления коинов, меняются условия вокруг: как уровень зарабатывается и что накопленное не сгорает.»<br><b>Перед встречей:</b> уточни у Артёма, 5% — это начисление коинов или скидка в чеке. Правила не опубликованы (домен 403), проверить неоткуда. Если скидка в чеке — аргумент про маржу франчайзи только сильнее: он платит за неё уже сегодня.</div></div>
+  <div class="nh">Слайд 03 · Проблема 1 · карта у кассы</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Подвал, металл, иногда глушат сигнал. Человек достаёт телефон, а приложение вместо кода показывает ошибку — и за ним очередь.» Дальше главное: «покупатель решил это сам, он просто сфотографировал код. Скриншот открывается мгновенно и без интернета. Только приложение он после этого не открывает никогда.» Потом переходи вправо: «мы делаем так, чтобы код был на первом экране и рисовался без сети».</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что это поднимет продажи — мы этого не мерили. Не называй долю магазинов без связи, мы её не считали. И не говори «офлайн-режим» — говори «работает без интернета».</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«У нас же карта работает, люди показывают»</i> — «Показывают. Фотографией из галереи. Покупка есть, а приложение не открыто — и всё остальное, что вы в него вложили, человек не видит.»<br><i>«На всех ли кассах заработает?»</i> — «Там, где сканер читает экран телефона, — да. Часть сканеров экран не видит физически, поэтому мы сначала соберём через управляющих, что стоит на кассах.»</div></div>
 </aside>
 </section>
 
-<!-- ═══════════ 08 · СОСТАВ РАБОТ ═══════════ -->
+<!-- ═══════════ 04 · ВХОД ═══════════ -->
+<section class="slide">
+<div class="cwrap"><div class="canvas">
+  <div class="pad dense">
+    <div class="kick an" style="--d:0ms">Проблема 2 · в приложение не войти</div>
+    <h1 class="an" style="--d:60ms">Код по СМС не приходит, а вход постоянно слетает</h1>
+    <div class="ps">
+      <div>
+        <div class="pshead bad an" style="--d:120ms">Что происходит сейчас</div>
+        <ul class="plain">
+          <li class="an" style="--d:160ms">Человек переставил приложение — и должен входить заново.</li>
+          <li class="an" style="--d:200ms">Код по СМС не приходит, а после нескольких попыток приложение перестаёт его слать.</li>
+          <li class="an" style="--d:240ms">Ждать приходится днями, и часть людей просто удаляет приложение.</li>
+          <li class="an" style="--d:280ms"><b>Это самая частая жалоба у приложений таких же сетей.</b></li>
+        </ul>
+        <div class="qbox an" style="--d:320ms">
+          <q>уже больше пару месяцев не могу зайти в приложение, ни по смс, ни по звонку</q>
+          <span class="who">отзыв о приложении сети разливного пива</span>
+        </div>
+      </div>
+      <div>
+        <div class="pshead good an" style="--d:140ms">Что сделаем</div>
+        <ul class="plain">
+          <li class="an" style="--d:180ms">Вход будет сохраняться — заново входить не придётся.</li>
+          <li class="an" style="--d:220ms">Если код не пришёл, приложение предложит звонок вместо СМС.</li>
+          <li class="an" style="--d:260ms">Вместо «что-то пошло не так» человек увидит, что именно случилось и что делать.</li>
+          <li class="an" style="--d:300ms">Найдём телефоны, на которых вход ломается чаще всего, и починим именно на них.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="resline an" style="--d:380ms">Человек входит один раз. <em>Дальше приложение просто открывается.</em></div>
+  </div>
+</div></div>
+<aside class="notes">
+  <div class="nh">Слайд 04 · Проблема 2 · вход</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Это самая громкая жалоба во всей категории — не только у вас, у всех. Человек переставил телефон или приложение, и всё: код не приходит, а после нескольких попыток его ещё и блокируют на несколько дней.» Дальше: «мы делаем так, чтобы входить нужно было один раз».</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что СМС начнут доходить всегда — это зависит от оператора. Мы отвечаем за то, что вход не будет слетать и что человеку будет понятно, что делать.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Это точно наша проблема, а не оператора?»</i> — «И та и другая. Доставку СМС мы не контролируем, но человека не должно выбрасывать из приложения каждый раз — вот это наша часть, и она чинится.»</div></div>
+</aside>
+</section>
+
+<!-- ═══════════ 05 · ПРАВИЛА И КАРТОЧКА ═══════════ -->
+<section class="slide">
+<div class="cwrap"><div class="canvas">
+  <div class="pad dense">
+    <div class="kick an" style="--d:0ms">Проблема 3 · правила программы нигде не опубликованы</div>
+    <h1 class="an" style="--d:60ms">Сайт с правилами не открывается,<br>а приложение выпущено на частное лицо</h1>
+    <div class="ps">
+      <div>
+        <div class="pshead bad an" style="--d:120ms">Что мы нашли</div>
+        <ul class="plain">
+          <li class="an" style="--d:160ms">Сайт <b>tdpivoman.ru</b> не открывается. Из App Store на него ведут три обязательные ссылки.</li>
+          <li class="an" style="--d:200ms">Пока сайт лежит, правила ПМкоинов прочитать негде — ни покупателю, ни проверяющему.</li>
+          <li class="an" style="--d:240ms">В App Store приложение выпущено с личного аккаунта человека, а не на ООО.</li>
+          <li class="an" style="--d:280ms">На 26 отзывов покупателей никто не ответил.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="pshead good an" style="--d:140ms">Что сделаем</div>
+        <ul class="plain">
+          <li class="an" style="--d:180ms">Поднимем сайт заново и опубликуем на нём правила программы.</li>
+          <li class="an" style="--d:220ms">Выпустим приложение с аккаунта вашего ООО.</li>
+          <li class="an" style="--d:260ms">Ответим на отзывы и дальше будем отвечать по понятному правилу.</li>
+          <li class="an" style="--d:300ms">Сайт поднимем с чистого листа, а не из старой копии.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="resline an" style="--d:380ms">Приносим как есть. <em>Это стоит закрыть до того, как заметит кто-то другой.</em></div>
+  </div>
+</div></div>
+<aside class="notes">
+  <div class="nh">Слайд 05 · Проблема 3 · правила и карточка · деликатный</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы это нашли, пока разбирали вашу карточку в сторе, и приносим как есть.» Про сайт: «на него ведут три обязательные ссылки из App Store, а он не открывается — значит, правила программы формально нигде не опубликованы». Про издателя — спокойно, как техническую деталь: «выпустим приложение с аккаунта вашего ООО».</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Слова «нарушение» здесь нет и в речи быть не должно. Не «у вас проблема», а «вот что стоит закрыть». Не гадай, почему приложение выпущено на частное лицо. И не предлагай восстановить старый сайт из копии — там осталась акция по табаку, а по табаку правила строже, чем по пиву.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А установки и оценки мы потеряем?»</i> — «Есть два пути. Новая карточка на ООО: начинаем с чистого листа, старые плохие отзывы не переезжают, но и установки не переезжают. Либо перенос текущей карточки на ООО: всё сохраняется, но вместе со старыми отзывами. Что важнее — решаете вы, мы закрываем оба варианта.»<br><i>«Почему вы туда вообще полезли?»</i> — «Это первое, что открывает любой, кто захочет придраться.»</div></div>
+</aside>
+</section>
+
+<!-- ═══════════ 06 · ЛОЯЛЬНОСТЬ ═══════════ -->
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense xt">
-    <div class="kick an" style="--d:0ms">Программа работ · шесть направлений · четыре этапа</div>
+    <div class="kick an" style="--d:0ms">Проблема 4 · предложение по программе лояльности</div>
+    <h1 class="an" style="--d:60ms">Сейчас программа считает, сколько человек потратил.<br>Предлагаем считать, как часто он приходит.</h1>
+    <div class="three">
+      <div>
+        <div class="pshead bad an" style="--d:120ms">Как сейчас</div>
+        <ul class="plain">
+          <li class="an" style="--d:160ms">По отзывам покупателей: чтобы держать свой процент, надо выкупать на <b>30 000 ₽ за три месяца</b>.</li>
+          <li class="an" style="--d:190ms">Не успел — уровень падает, накопленное сгорает, копишь заново.</li>
+        </ul>
+        <div class="qbox an" style="--d:220ms">
+          <q>Глупая система лояльности. Неадекватные условия поддерживания своего процента скидки</q>
+          <span class="who">Павел · отзыв о вашем приложении</span>
+        </div>
+      </div>
+      <div>
+        <div class="pshead good an" style="--d:140ms">Что предлагаем</div>
+        <ul class="plain">
+          <li class="an" style="--d:180ms">Уровень растёт от <b>числа походов в магазин</b>, а не от суммы. Не больше одного похода в день.</li>
+          <li class="an" style="--d:210ms">Накопленное не сгорает.</li>
+          <li class="an" style="--d:240ms">Верхний уровень даёт не скидку, а <b>доступ</b>: редкие сорта и новинки раньше всех.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="pshead an" style="--d:160ms">Почему так лучше</div>
+        <ul class="plain">
+          <li class="an" style="--d:200ms">Порог меряет размер кошелька, а не то, как часто человек к вам заходит. Сколько людей его выполняют — видно только по вашим выгрузкам.</li>
+          <li class="an" style="--d:230ms">Сегодня программа не различает того, кто заходит каждую неделю, и того, кто закупился дважды крупно. Для сети это разные покупатели.</li>
+          <li class="an" style="--d:260ms">Редкий сорт не стоит вам скидки, а как награда работает не хуже.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="resline an" style="--d:320ms">На кассе ничего не меняется. <em>Кассовую программу не трогаем.</em></div>
+  </div>
+</div></div>
+<aside class="notes">
+  <div class="nh">Слайд 06 · Проблема 4 · лояльность</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Сегодня программа меряет, сколько человек потратил. Тридцать тысяч за три месяца — это про размер кошелька, а не про то, как часто он к вам заходит.» Дальше предложение: «считать походы. Пришёл — засчитали, не больше раза в день. Накопленное не сгорает. А верхний уровень пусть даёт не скидку, а доступ: редкий сорт, новинки раньше всех.» И закрой главное опасение: «баллы никто не отменяет, выгода у покупателя остаётся».</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй новые цифры: сколько походов на уровень, какой множитель, курс коина. Их считают по вашим выгрузкам, а выгрузок у нас нет. Не говори, что нынешний порог — ошибка: он просто меряет другое.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«То есть вы предлагаете раздавать больше?»</i> — «Нет. Перестать платить за размер чека и начать поощрять возвраты. Верхний уровень вообще не про деньги.»<br><i>«А наши 5% отменяются?»</i> — «Нет, процент остаётся. Меняется то, как уровень зарабатывается и что накопленное не сгорает.»<br><b>Перед встречей уточни у Артёма:</b> 5% — это начисление коинов или скидка в чеке? Правила не опубликованы, проверить неоткуда.</div></div>
+</aside>
+</section>
+
+<!-- ═══════════ 07 · СОСТАВ РАБОТ ═══════════ -->
+<section class="slide">
+<div class="cwrap"><div class="canvas">
+  <div class="pad dense xt">
+    <div class="kick an" style="--d:0ms">Состав работ</div>
     <div style="display:flex;align-items:baseline;gap:20px">
-      <h1 class="an" style="--d:60ms">Что именно мы делаем</h1>
+      <h1 class="an" style="--d:60ms">Что именно мы сделаем</h1>
       <div class="wcount an" style="--d:100ms">31 работа</div>
     </div>
-    <div class="lead8 an" style="--d:130ms">Это не отдельные правки, а переработка приложения по шести направлениям — от экрана карты до программы лояльности и отчётности.</div>
     <div class="works">
       <div class="wcol">
         <div class="wgrp an" style="--d:150ms">
-          <h5>A · Штрихкод и работа без сети</h5>
+          <h5>Карта и код у кассы</h5>
           <ul>
-            <li>Карта первым экраном приложения</li>
-            <li>Отрисовка штрихкода без интернета</li>
-            <li>Локальное хранение кода карты</li>
-            <li>Запрет промежуточных окон до кода</li>
-            <li>Автояркость экрана при показе кода</li>
-            <li>Поддержка форматов EAN-13, Code128, QR</li>
-            <li>Кнопка «Не приняли карту» с выбором точки</li>
-            <li>Перепись типов сканеров по точкам</li>
+            <li>Карта — первый экран приложения</li>
+            <li>Код показывается без интернета</li>
+            <li>Код хранится в самом телефоне</li>
+            <li>Между иконкой и кодом нет окон</li>
+            <li>Экран становится ярче при показе кода</li>
+            <li>Подберём формат кода под сканеры на кассах</li>
+            <li>Кнопка «Не приняли карту»</li>
+            <li>Сбор через управляющих: какие сканеры на кассах</li>
           </ul>
         </div>
         <div class="wgrp an" style="--d:190ms">
-          <h5>F · Аналитика и отчётность</h5>
+          <h5>Отчёты для вас</h5>
           <ul>
-            <li>Базовая линия письменно, с датой</li>
-            <li>События: запуски, показы кода, офлайн</li>
-            <li>Отчёт по точкам и частоте визитов</li>
+            <li>Замерим, как приложение работает сейчас</li>
+            <li>Будем считать: сколько раз открыли приложение и показали код</li>
+            <li>Отчёт по магазинам и частоте визитов</li>
           </ul>
         </div>
       </div>
       <div class="wcol">
         <div class="wgrp an" style="--d:230ms">
-          <h5>B · Вход и авторизация</h5>
+          <h5>Вход в приложение</h5>
           <ul>
-            <li>Разбор входа после переустановки</li>
-            <li>Хранение сессии и автологин</li>
-            <li>Обработка лимита SMS-кодов</li>
-            <li>Резервный способ входа</li>
-            <li>Понятные тексты ошибок вместо заглушки</li>
-            <li>Диагностика по моделям и версиям ОС</li>
+            <li>Вход после переустановки</li>
+            <li>Вход сохраняется, заново не нужен</li>
+            <li>Что делать, если СМС не пришла</li>
+            <li>Звонок вместо СМС</li>
+            <li>Понятные сообщения вместо ошибки</li>
+            <li>Разбор по моделям телефонов</li>
           </ul>
         </div>
         <div class="wgrp an" style="--d:270ms">
-          <h5>C · Программа лояльности</h5>
+          <h5>Программа лояльности</h5>
           <ul>
-            <li>Пороги по визитам вместо суммы</li>
-            <li>Отказ от обнуления при смене окна</li>
-            <li>Множитель начисления вместо скидки</li>
-            <li>Статусы на доступ, а не на скидку</li>
-            <li>Экран истории начислений и списаний</li>
-            <li>Публикация правил на рабочем домене</li>
+            <li>Уровень за походы, а не за сумму</li>
+            <li>Накопленное не сгорает</li>
+            <li>Повышенное начисление сверх процента</li>
+            <li>Верхний уровень даёт доступ</li>
+            <li>Экран истории: что начислено и списано</li>
+            <li>Правила программы на рабочем сайте</li>
           </ul>
         </div>
       </div>
       <div class="wcol">
         <div class="wgrp an" style="--d:310ms">
-          <h5>D · Активации</h5>
+          <h5>Предложения на экране с картой</h5>
           <ul>
-            <li>Карточки активаций рядом с картой</li>
-            <li>Ручная активация, срок до 14 дней</li>
-            <li>Напоминания об истекающих</li>
-            <li>Отчёт по активациям и погашению</li>
+            <li>Предложения рядом с картой</li>
+            <li>Приходят только тем, кто на них согласился</li>
+            <li>Напоминание, когда срок заканчивается</li>
+            <li>Отчёт: сколько включили и использовали</li>
           </ul>
         </div>
         <div class="wgrp an" style="--d:350ms">
-          <h5>E · Сторы и репутация</h5>
+          <h5>Страница приложения и отзывы</h5>
           <ul>
             <li>Ответы на 26 отзывов без ответа</li>
-            <li>Регламент ответов на отзывы</li>
-            <li>Выпуск карточки с аккаунта вашего ООО</li>
-            <li>Домен tdpivoman.ru с чистого листа</li>
+            <li>Правило, как отвечать дальше</li>
+            <li>Приложение на аккаунте вашего ООО</li>
+            <li>Сайт tdpivoman.ru заново</li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="wnote an" style="--d:400ms"><b>В состав не входит:</b> остаток в литрах и даты завоза. Данные есть вплоть до номера крана, но это остаток по учёту, а не фактический — пена, промывка, недолив и бой в систему не передаются, события «кран освободился» не существует.</div>
+    <div class="wnote an" style="--d:400ms"><b>Чего делать не будем:</b> показывать остаток пива в литрах и даты завоза. Такие данные есть только в учёте, а не по факту на кране: пена, промывка и недолив в систему не попадают. Человек приедет за сортом, которого уже нет.</div>
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 08 · Состав работ</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Вот полный перечень — тридцать одна работа по шести направлениям. Это не список идей, каждая строка привязана к тому, что мы разобрали на предыдущих слайдах.» Не читай список целиком, дай залу пройтись глазами и назови три-четыре пункта, которые им ближе всего: штрихкод без сети, вход после переустановки, ответы на отзывы, перенос издателя. Потом сразу переходи на следующий слайд — там эти же работы разложены по этапам.</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что все двадцать девять войдут в первый этап и не называй сроки по отдельным строкам. Не выдавай перепись сканеров за работу, которую можно пропустить, — без неё часть пунктов не гарантирована. И не читай слайд вслух построчно, это убивает темп.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Это всё обязательно?»</i> — «Нет. Обязателен первый этап, он снимает проблему у кассы. Остальное разложено по этапам на следующем слайде, и вы решаете, где остановиться.»<br><i>«Что из этого можно сделать своими силами?»</i> — «Аналитику и ответы на отзывы обычно забирают внутрь, остальное требует правок в приложении.»</div></div>
+  <div class="nh">Слайд 07 · Состав работ</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Тридцать одна работа по пяти направлениям. Почти каждая строка привязана к тому, что мы разобрали на предыдущих слайдах.» Список целиком не читай — дай залу пройтись глазами и назови три-четыре пункта, которые им ближе: код без интернета, вход, ответы на отзывы, сайт.</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что все тридцать одна будут сделаны сразу. Не читай слайд построчно — убивает темп. И не обещай наличие в литрах, даже если попросят: этого нет ни в одной системе.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Это всё обязательно?»</i> — «Нет. Обязательно то, что мешает у кассы. Остальное берётся отдельно, и вы решаете, где остановиться.»<br><i>«А почему не показать, есть ли пиво в магазине?»</i> — «Потому что цифра в учёте и то, что реально в кране, — разные вещи. Человек приедет, а сорта нет, и виноватым будет приложение. У конкурентов это уже случилось.»</div></div>
 </aside>
 </section>
 
-<!-- ═══════════ 09 · ЭТАПЫ ═══════════ -->
+<!-- ═══════════ 08 · С ЧЕГО НАЧНЁМ ═══════════ -->
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Четыре этапа · оплата по факту приёмки</div>
-    <h1 class="an" style="--d:60ms">Как работы разбиты на этапы</h1>
-    <div class="stages">
-        <div class="stg an" style="--d:150ms">
-          <div class="n">01</div>
-          <div><div class="t">Код на кассе работает всегда</div><div class="c">Покупатель достаёт карту за два тапа, даже когда в магазине нет интернета.</div></div>
-        </div>
-        <div class="stg an" style="--d:200ms">
-          <div class="n">02</div>
-          <div><div class="t">В приложение можно войти</div><div class="c">Вход перестаёт слетать после переустановки, коды приходят, ошибки понятны.</div></div>
-        </div>
-        <div class="stg an" style="--d:250ms">
-          <div class="n">03</div>
-          <div><div class="t">Порядок в сторах и документах</div><div class="c">Правила программы опубликованы, приложение выпущено на ваше ООО, на отзывы отвечают.</div></div>
-        </div>
-        <div class="stg an" style="--d:300ms">
-          <div class="n">04</div>
-          <div><div class="t">Программа считает визиты, а не сумму</div><div class="c">Статус зарабатывается походами в магазин, накопленное не сгорает.</div></div>
-        </div>
+    <div class="kick an" style="--d:0ms">Первые шаги</div>
+    <h1 class="an" style="--d:60ms">С чего начинаем</h1>
+    <div class="ps">
+      <div>
+        <div class="pshead good an" style="--d:120ms">Мы</div>
+        <ul class="plain">
+          <li class="an" style="--d:160ms">Запишем, как приложение работает сейчас, — чтобы потом было видно разницу.</li>
+          <li class="an" style="--d:200ms">Начнём с карты и кода у кассы.</li>
+          <li class="an" style="--d:240ms">Ответим на отзывы, на которые никто не ответил.</li>
+          <li class="an" style="--d:280ms">Соберём через управляющих, какие сканеры стоят на кассах.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="pshead an" style="--d:140ms">От вас нужно</div>
+        <ul class="plain">
+          <li class="an" style="--d:180ms">Как сейчас начисляются ПМкоины и какая программа стоит на кассах.</li>
+          <li class="an" style="--d:220ms">Кто платит за бонусы — сеть или владелец магазина.</li>
+          <li class="an" style="--d:260ms">Таблица за полгода: кому сколько коинов начислили и сколько потратили.</li>
+          <li class="an" style="--d:300ms">Что именно ломается при входе: телефоны, версии, примеры.</li>
+        </ul>
+      </div>
     </div>
-    <div class="paybar an" style="--d:390ms">
-      <div class="l"><em>Аванс 500 000 ₽</em> — вход в работу. Дальше платите за каждый принятый этап.</div>
-      <div class="s">Первые три этапа начинаем сразу, от вас для них ничего не нужно. Четвёртый — когда получим данные по начислению коинов. Суммы по этапам — в смете, в течение недели.</div>
-    </div>
+    <div class="resline an" style="--d:370ms">Карту, код и отзывы начинаем сразу. <em>Программу лояльности — как только придут ваши ответы.</em></div>
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 09 · Этапы и оплата</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Все тридцать одна работа собраны в четыре этапа. Каждый этап — это не список задач, а результат, который вы можете проверить руками: код на кассе достаётся без интернета; в приложение стало можно войти; в сторах и документах порядок; программа считает визиты.» Про порядок: «первые три начинаем сразу, от вас для них не нужно ничего. Четвёртый упирается в данные по начислению коинов.» Про деньги: «аванс пятьсот тысяч — вход в работу, дальше вы платите за каждый принятый этап, а не вперёд.»</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй суммы по этапам и проценты — они в смете. Не обещай сроки, их на слайде нет намеренно. Не говори, что все четыре обязательны: клиент выбирает, где остановиться. И не читай состав работ ещё раз — он на предыдущем слайде, здесь только результаты.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«За что аванс?»</i> — «Команда садится на проект. До первой строки кода мы письменно фиксируем, как приложение работает сейчас, — чтобы через месяц было с чем сравнивать, и делаем перепись сканеров по точкам.»<br><i>«Можно взять только первый этап?»</i> — «Да, он закрывает проблему у кассы и ни от чего не зависит.»<br><i>«Сколько всего?»</i> — «Смета с расчётом по этапам — в течение недели после встречи. По первому этапу цифра будет твёрдая, по четвёртому уточнится, когда придут ваши выгрузки.»<br><b>Четыре запроса по данным — продиктуй в конце и продублируй письмом:</b> 1) как проходит начисление ПМкоинов, какое ПО на кассе, сколько из 794 точек закрыто этим каналом; 2) кто платит за кэшбэк и списание; 3) курс коина и объёмы по точкам за 3–6 месяцев; 4) что ломается при входе после переустановки.</div></div>
+  <div class="nh">Слайд 08 · С чего начинаем</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Работу по карте, коду и отзывам мы начинаем сразу, для неё от вас ничего не нужно. Программа лояльности упирается в четыре ответа — они справа.» Первый вопрос главный: как сегодня начисляются коины и какая программа стоит на кассах. Скажи, что пришлёшь этот список письмом в тот же день.</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не проси решения прямо в комнате. Не сваливай все четыре вопроса на одного человека — про кассы и про выгрузки обычно отвечают разные люди. И не заканчивай на «ну вот как-то так».</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Кому это писать и в каком виде?»</i> — «Одно письмо своими словами от того, кто отвечает за кассы, и выгрузки в любом виде, хоть в Excel. Шаблон пришлём в тот же день, чтобы вашим людям не пришлось ничего придумывать.»</div></div>
 </aside>
 </section>
 
@@ -856,14 +735,14 @@ var ANIM = {};
 var timers = [];
 function later(fn, ms){ var t = setTimeout(fn, ms); timers.push(t); return t; }
 
-/* ── слайд 02: штрихкод рисуется, гаснет, поверх встаёт ошибка ── */
+/* ── слайд 03 (индекс 2): штрихкод рисуется, гаснет, поверх встаёт ошибка ── */
 (function(){
   var el = document.getElementById("bcHero");
   if (!el) return;
   var err = el.parentNode.querySelector(".bc-err");
   var bars = svg("g", {id:"bcBars"});
   el.appendChild(bars);
-  var W = 360, barH = 126, x = 0, i = 0;
+  var W = 300, barH = 62, x = 0, i = 0;
   while (x < W - 2 && i < 320){
     var r = rnd(i * 3 + 7);
     var w = r < .38 ? 3 : r < .74 ? 4 : 7;
@@ -871,13 +750,13 @@ function later(fn, ms){ var t = setTimeout(fn, ms); timers.push(t); return t; }
     if (i % 2 === 0) bars.appendChild(svg("rect", {x:x, y:0, width:w, height:barH, fill:"#1E1A17"}));
     x += w; i++;
   }
-  var t = svg("text", {x:0, y:158, fill:"#8B7E6C",
-    "font-family":"ui-monospace,SFMono-Regular,Menlo,monospace", "font-size":"14",
-    "letter-spacing":"5"});
+  var t = svg("text", {x:0, y:80, fill:"#8B7E6C",
+    "font-family":"ui-monospace,SFMono-Regular,Menlo,monospace", "font-size":"12",
+    "letter-spacing":"4"});
   t.textContent = "КАРТА ПИВОМАН";
   el.appendChild(t);
 
-  ANIM[1] = {
+  ANIM[2] = {   /* ключ = номер слайда, считая с нуля */
     play: function(){
       el.classList.add("wipe");
       void el.getBoundingClientRect().width;     /* принудительный reflow */
@@ -893,106 +772,6 @@ function later(fn, ms){ var t = setTimeout(fn, ms); timers.push(t); return t; }
   };
 })();
 
-/* ── слайд 04: ранг классов жалоб ── */
-(function(){
-  var el = document.getElementById("reviewChart");
-  if (!el) return;
-  var data = [
-    ["Вход, авторизация, СМС и звонок", 516, 2],
-    ["Краши, зависания, «сырое»", 149, 0],
-    ["Неверное наличие и ассортимент", 139, 0],
-    ["Цены и акции не совпадают с кассой", 71, 0],
-    ["Бонусы сгорели или не начислились", 50, 0],
-    ["Штрихкод или QR не считывается", 41, 1],
-    ["Условия лояльности ухудшены", 35, 0],
-    ["Лимит запросов кода и блокировка", 25, 0],
-    ["Поддержка не отвечает", 25, 0],
-    ["Акции не принимают в точке — франшиза", 24, 0],
-    ["Прямая формулировка «без интернета»", 11, 1]
-  ];
-  var x0 = 320, x1 = 660, max = 516, rowH = 27, barH = 10;
-  var rows = [], plain = 0;
-  data.forEach(function(d, i){
-    var y = i * rowH + 6;
-    var hot = d[2];
-    var g = svg("g", {});
-    var lab = svg("text", {x:x0 - 15, y:y + barH, "text-anchor":"end",
-      fill: hot ? "#1E1A17" : "#5C5145",
-      "font-family":"-apple-system,BlinkMacSystemFont,sans-serif",
-      "font-size":"13.5", "font-weight": hot ? "600" : "400"});
-    lab.textContent = d[0];
-    g.appendChild(lab);
-    g.appendChild(svg("rect", {x:x0, y:y, width:x1 - x0, height:barH, fill:"rgba(30,26,23,.05)"}));
-    var w = Math.max(2, Math.round((x1 - x0) * d[1] / max));
-    var bar = svg("rect", {x:x0, y:y, width:w, height:barH,
-      fill: hot === 1 ? "#9C6B12" : hot === 2 ? "#4A5A26" : "#3B2C1E",
-      opacity: hot ? "1" : ".42"});
-    bar.setAttribute("style", "transform-box:fill-box;transform-origin:left center");
-    g.appendChild(bar);
-    var n = svg("text", {x:x1 + 12, y:y + barH,
-      fill: hot === 1 ? "#9C6B12" : hot === 2 ? "#4A5A26" : "#1E1A17",
-      "font-family":"ui-monospace,SFMono-Regular,Menlo,monospace", "font-size":"14",
-      "font-variant-numeric":"tabular-nums"});
-    n.textContent = d[1];
-    g.appendChild(n);
-    el.appendChild(g);
-    rows.push({g:g, bar:bar, num:n, val:d[1], hot:hot, order: hot ? 0 : plain++});
-  });
-  var hotBase = plain * 46 + 240, hi = 0;
-  rows.forEach(function(r){
-    r.delay = r.hot ? (hotBase + (hi++) * 150) : r.order * 46;
-  });
-
-  var gen = 0;                                   /* поколение: отменяет счётчики при быстром листании */
-  function reset(){
-    gen++;
-    rows.forEach(function(r){
-      r.g.setAttribute("opacity", "0");
-      r.bar.style.transition = "none";
-      r.bar.style.transform = "scaleX(0)";
-      r.num.textContent = "0";
-    });
-  }
-  function settle(){
-    gen++;
-    rows.forEach(function(r){
-      r.g.setAttribute("opacity", "1");
-      r.bar.style.transition = "none";
-      r.bar.style.transform = "scaleX(1)";
-      r.num.textContent = r.val;
-    });
-  }
-  function count(node, to, dur, myGen){
-    var t0 = null;
-    function step(ts){
-      if (myGen !== gen) return;                 /* поколение сменилось — счётчик молчит */
-      if (t0 === null) t0 = ts;
-      var p = Math.min(1, (ts - t0) / dur);
-      node.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(step); else node.textContent = to;
-    }
-    requestAnimationFrame(step);
-  }
-  ANIM[3] = {
-    play: function(){
-      reset();
-      gen++;
-      var g0 = gen;
-      void el.getBoundingClientRect().width;
-      rows.forEach(function(r){
-        later(function(){
-          if (g0 !== gen) return;
-          r.g.setAttribute("opacity", "1");
-          r.bar.style.transition = "transform .5s cubic-bezier(.16,1,.3,1)";
-          r.bar.style.transform = "scaleX(1)";
-          count(r.num, r.val, 480, g0);
-        }, r.delay + 120);
-      });
-    },
-    finish: settle
-  };
-  settle();
-})();
 
 /* ─────────── подгонка содержимого под высоту кадра ─────────── */
 (function(){
