@@ -282,25 +282,19 @@ ul.pl li span{display:block;font-size:15px;line-height:1.42;color:var(--ink-3);m
 .wcount{font-size:32px;font-weight:200;color:var(--ochre);letter-spacing:-.03em;
   font-variant-numeric:tabular-nums;line-height:1}
 
-/* ─────────── 09 · блоки этапов ─────────── */
+/* ─────────── 09 · этапы ─────────── */
 .stages{margin-top:20px;border-top:1px solid var(--hair)}
-.stg{display:grid;grid-template-columns:56px 1fr 190px;gap:0 22px;align-items:baseline;
-  padding:8px 0;border-bottom:1px solid var(--hair-2)}
-.stg .g{font-family:var(--mono);font-size:10.5px;line-height:1.5;letter-spacing:.09em;
-  text-transform:uppercase;color:var(--ink-3);text-align:right}
-.stg.pre .n,.stg.pre .g{color:var(--olive)}
-.stg.dep .g{color:var(--ochre)}
-.stg.pre{border-bottom:1px solid var(--hair-3)}
+.stg{display:grid;grid-template-columns:70px 1fr;gap:0 28px;align-items:baseline;
+  padding:12px 0;border-bottom:1px solid var(--hair-2)}
 .stg:last-child{border-bottom:0}
-.stg .n{font-size:30px;font-weight:200;line-height:.9;color:var(--ochre);
+.stg .n{font-size:34px;font-weight:200;line-height:.85;color:var(--ochre);
   font-variant-numeric:tabular-nums;letter-spacing:-.03em}
-.stg .t{font-size:19px;font-weight:600;line-height:1.28;color:var(--ink);letter-spacing:-.012em}
-.stg .c{font-size:14px;line-height:1.4;color:var(--ink-3);margin-top:4px}
-.paybar{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair-3)}
+.stg .t{font-size:21.5px;font-weight:600;line-height:1.25;color:var(--ink);letter-spacing:-.015em}
+.stg .c{font-size:16.5px;line-height:1.42;color:var(--ink-2);margin-top:6px}
+.paybar{margin-top:20px;padding-top:16px;border-top:1px solid var(--hair-3)}
 .paybar .l{font-size:22px;font-weight:600;line-height:1.35;color:var(--ink);letter-spacing:-.015em}
 .paybar .l em{font-style:normal;color:var(--ochre)}
-.paybar .s{font-family:var(--mono);font-size:11.5px;line-height:1.6;letter-spacing:.03em;
-  color:var(--ink-3);margin-top:9px}
+.paybar .s{font-size:16px;line-height:1.45;color:var(--ink-2);margin-top:9px}
 
 /* ─────────── появление ─────────── */
 body.js .an{opacity:0;transform:translateY(10px)}
@@ -752,46 +746,37 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Этапы работ и порядок оплаты</div>
+    <div class="kick an" style="--d:0ms">Четыре этапа · оплата по факту приёмки</div>
     <h1 class="an" style="--d:60ms">Как работы разбиты на этапы</h1>
     <div class="stages">
-        <div class="stg pre an" style="--d:140ms">
-          <div class="n">00</div>
-          <div><div class="t">Подготовка</div><div class="c">базовая линия письменно с датой, события аналитики, перепись типов сканеров по точкам</div></div>
-          <div class="g">входит в аванс</div>
-        </div>
-        <div class="stg an" style="--d:185ms">
+        <div class="stg an" style="--d:150ms">
           <div class="n">01</div>
-          <div><div class="t">Штрихкод открывается без сети</div><div class="c">карта первым экраном, код из локального хранилища, запрет промежуточных окон, кнопка «Не приняли»</div></div>
-          <div class="g">не зависит<br>от ваших данных</div>
+          <div><div class="t">Код на кассе работает всегда</div><div class="c">Покупатель достаёт карту за два тапа, даже когда в магазине нет интернета.</div></div>
         </div>
-        <div class="stg an" style="--d:230ms">
+        <div class="stg an" style="--d:200ms">
           <div class="n">02</div>
-          <div><div class="t">В приложение можно войти</div><div class="c">вход после переустановки, сессия и автологин, лимит SMS-кодов, понятные ошибки, диагностика по моделям</div></div>
-          <div class="g">не зависит<br>от ваших данных</div>
+          <div><div class="t">В приложение можно войти</div><div class="c">Вход перестаёт слетать после переустановки, коды приходят, ошибки понятны.</div></div>
         </div>
-        <div class="stg an" style="--d:275ms">
+        <div class="stg an" style="--d:250ms">
           <div class="n">03</div>
-          <div><div class="t">Легальный контур и сторы</div><div class="c">правила программы на рабочем домене, карточка с аккаунта ООО, ответы на 26 отзывов и регламент</div></div>
-          <div class="g">идёт параллельно</div>
+          <div><div class="t">Порядок в сторах и документах</div><div class="c">Правила программы опубликованы, приложение выпущено на ваше ООО, на отзывы отвечают.</div></div>
         </div>
-        <div class="stg dep an" style="--d:320ms">
+        <div class="stg an" style="--d:300ms">
           <div class="n">04</div>
-          <div><div class="t">Программа лояльности и активации</div><div class="c">пороги по визитам, множитель начисления, статусы на доступ, карточки активаций, отчёт по точкам</div></div>
-          <div class="g">после выгрузок<br>по программе</div>
+          <div><div class="t">Программа считает визиты, а не сумму</div><div class="c">Статус зарабатывается походами в магазин, накопленное не сгорает.</div></div>
         </div>
     </div>
     <div class="paybar an" style="--d:390ms">
-      <div class="l">Оплата поэтапная: <em>аванс 500 000 ₽</em> закрывает подготовку и вход в работу, дальше — процент по факту приёмки каждого этапа.</div>
-      <div class="s">Этапы 01–03 не зависят от ваших данных и могут идти подряд. Распределение процентов и итоговая сумма — в смете, в течение недели после встречи.</div>
+      <div class="l"><em>Аванс 500 000 ₽</em> — вход в работу. Дальше платите за каждый принятый этап.</div>
+      <div class="s">Первые три этапа начинаем сразу, от вас для них ничего не нужно. Четвёртый — когда получим данные по начислению коинов. Суммы по этапам — в смете, в течение недели.</div>
     </div>
   </div>
 </div></div>
 <aside class="notes">
   <div class="nh">Слайд 09 · Этапы и оплата</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Тридцать одна работа разбита на подготовку и четыре этапа. Порядок не случайный: сначала базовая линия, чтобы было с чем сравнивать, потом код у кассы, потом вход, параллельно легальный контур. Программа лояльности идёт последней — она единственная упирается в ваши данные.» Про оплату: «аванс закрывает подготовку и вход в работу, дальше процент по факту приёмки каждого этапа — вы платите за принятую работу, а не вперёд.» Распределение процентов и итоговую сумму принесём в смете в течение недели.<br><b>Четыре запроса по данным — продиктуй в конце и продублируй письмом:</b> 1) как проходит начисление ПМкоинов, какое ПО на кассе, сколько из 794 точек закрыто этим каналом; 2) кто платит за кэшбэк и списание; 3) курс коина и объёмы по точкам за 3–6 месяцев; 4) что ломается при входе после переустановки. Без первого четвёртый этап не начинается.</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй итоговую сумму и проценты по этапам — их считают в смете, и это нормальный ответ. Не обещай сроки: на слайде их нет намеренно. И не говори, что все четыре этапа обязательны — клиент выбирает, где остановиться. Не называй подготовку «этапом»: она входит в аванс, отдельно за неё не платят.</div></div>
-  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Почему аванс именно пятьсот тысяч?»</i> — «Он закрывает подготовку: базовая линия письменно с датой, события аналитики, перепись сканеров. Без этого нечем доказать результат. Дальше платите только за принятые этапы.»<br><i>«Можно взять только первый этап?»</i> — «Да, он закрывает проблему у кассы. Остальные берутся отдельно.»<br><i>«Сколько всего?»</i> — «Смета с расчётом по этапам — в течение недели после встречи. По первому этапу цифра будет твёрдая. По четвёртому и пятому — расчёт уточняется, когда придут выгрузки по программе: без них там можно только гадать.»</div></div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Все тридцать одна работа собраны в четыре этапа. Каждый этап — это не список задач, а результат, который вы можете проверить руками: код на кассе достаётся без интернета; в приложение стало можно войти; в сторах и документах порядок; программа считает визиты.» Про порядок: «первые три начинаем сразу, от вас для них не нужно ничего. Четвёртый упирается в данные по начислению коинов.» Про деньги: «аванс пятьсот тысяч — вход в работу, дальше вы платите за каждый принятый этап, а не вперёд.»</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй суммы по этапам и проценты — они в смете. Не обещай сроки, их на слайде нет намеренно. Не говори, что все четыре обязательны: клиент выбирает, где остановиться. И не читай состав работ ещё раз — он на предыдущем слайде, здесь только результаты.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«За что аванс?»</i> — «Команда садится на проект. До первой строки кода мы письменно фиксируем, как приложение работает сейчас, — чтобы через месяц было с чем сравнивать, и делаем перепись сканеров по точкам.»<br><i>«Можно взять только первый этап?»</i> — «Да, он закрывает проблему у кассы и ни от чего не зависит.»<br><i>«Сколько всего?»</i> — «Смета с расчётом по этапам — в течение недели после встречи. По первому этапу цифра будет твёрдая, по четвёртому уточнится, когда придут ваши выгрузки.»<br><b>Четыре запроса по данным — продиктуй в конце и продублируй письмом:</b> 1) как проходит начисление ПМкоинов, какое ПО на кассе, сколько из 794 точек закрыто этим каналом; 2) кто платит за кэшбэк и списание; 3) курс коина и объёмы по точкам за 3–6 месяцев; 4) что ломается при входе после переустановки.</div></div>
 </aside>
 </section>
 
