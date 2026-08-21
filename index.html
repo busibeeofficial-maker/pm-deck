@@ -177,11 +177,11 @@ table.t tr:last-child td{border-bottom:0}
 
 /* ─────────── 08 · состав работ ─────────── */
 .works{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;margin-top:20px}
-.wcol{display:flex;flex-direction:column;gap:15px}
+.wcol{display:flex;flex-direction:column;gap:13px}
 .wgrp h5{font-family:var(--mono);font-size:10px;letter-spacing:.17em;text-transform:uppercase;
   color:var(--ochre);font-weight:400;padding-bottom:6px;border-bottom:1px solid var(--hair);margin-bottom:7px}
 .wgrp ul{list-style:none}
-.wgrp li{font-size:13.5px;line-height:1.32;color:var(--ink-2);padding:3.5px 0 3.5px 15px;position:relative}
+.wgrp li{font-size:13.5px;line-height:1.3;color:var(--ink-2);padding:3px 0 3px 15px;position:relative}
 .wgrp li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:1px;background:var(--hair-3)}
 .wnote{margin-top:16px;padding-top:12px;border-top:1px solid var(--hair);
   font-size:13.5px;line-height:1.45;color:var(--ink-3)}
@@ -190,14 +190,14 @@ table.t tr:last-child td{border-bottom:0}
   font-variant-numeric:tabular-nums;line-height:1}
 
 /* ─────────── 09 · этапы ─────────── */
-.stages{margin-top:20px;border-top:1px solid var(--hair)}
+.stages{margin-top:16px;border-top:1px solid var(--hair)}
 .stg{display:grid;grid-template-columns:70px 1fr;gap:0 28px;align-items:baseline;
-  padding:12px 0;border-bottom:1px solid var(--hair-2)}
+  padding:9px 0;border-bottom:1px solid var(--hair-2)}
 .stg:last-child{border-bottom:0}
 .stg .n{font-size:34px;font-weight:200;line-height:.85;color:var(--ochre);
   font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 .stg .t{font-size:21.5px;font-weight:600;line-height:1.25;color:var(--ink);letter-spacing:-.015em}
-.stg .c{font-size:16.5px;line-height:1.42;color:var(--ink-2);margin-top:6px}
+.stg .c{font-size:16px;line-height:1.4;color:var(--ink-2);margin-top:5px}
 
 /* ─────────── проблема → решение ─────────── */
 .ps{display:grid;grid-template-columns:1fr 1fr;gap:0 54px;margin-top:20px}
@@ -217,6 +217,12 @@ ul.plain li b{color:var(--ink);font-weight:600}
   font-size:20px;font-weight:600;line-height:1.35;color:var(--ink);letter-spacing:-.012em}
 .resline em{font-style:normal;color:var(--ochre)}
 .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 44px;margin-top:22px}
+
+.pal{display:flex;gap:9px;margin-top:14px}
+.pal div{flex:1}
+.pal i{display:block;height:46px;border:1px solid var(--hair)}
+.pal span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink-3);margin-top:7px}
 
 /* ─────────── появление ─────────── */
 body.js .an{opacity:0;transform:translateY(10px)}
@@ -339,7 +345,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <div class="cwrap"><div class="canvas">
   <div class="pad">
     <div class="kick an" style="--d:0ms">Что не так сейчас</div>
-    <h1 class="an" style="--d:60ms">Четыре проблемы. Дальше по каждой — решение.</h1>
+    <h1 class="an" style="--d:60ms">Пять проблем. Дальше по каждой — решение.</h1>
     <div class="stages">
       <div class="stg an" style="--d:140ms"><div class="n">01</div>
         <div><div class="t">У кассы не показать карту</div>
@@ -348,17 +354,20 @@ body.measuring .slide{display:flex!important;visibility:hidden}
         <div><div class="t">В приложение не войти</div>
         <div class="c">Код по СМС не приходит, а вход слетает после переустановки.</div></div></div>
       <div class="stg an" style="--d:240ms"><div class="n">03</div>
+        <div><div class="t">Приложения нет в Google Play</div>
+        <div class="c">Владельцы Android-телефонов не могут его там найти и установить.</div></div></div>
+      <div class="stg an" style="--d:290ms"><div class="n">04</div>
         <div><div class="t">Правила программы нигде не опубликованы</div>
         <div class="c">Сайт с правилами не открывается, а приложение выпущено на частное лицо.</div></div></div>
-      <div class="stg an" style="--d:290ms"><div class="n">04</div>
+      <div class="stg an" style="--d:340ms"><div class="n">05</div>
         <div><div class="t">Программа лояльности злит покупателей</div>
-        <div class="c">По отзывам покупателей, чтобы держать свой процент, надо выкупать на 30 000 ₽ за три месяца.</div></div></div>
+        <div class="c">По отзывам покупателей, чтобы держать процент, надо выкупать на 30 000 ₽ за три месяца.</div></div></div>
     </div>
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 02 · Четыре проблемы</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Вот четыре вещи. Первые две — про то, что человек физически не может сделать. Третья — про то, что его злит. Четвёртая — про бумаги.» Не разбирай их здесь, скажи: «дальше по каждой отдельно, и сразу что мы делаем».</div></div>
+  <div class="nh">Слайд 02 · Пять проблем</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Вот пять вещей. Первые три — про то, что человек физически не может сделать: показать карту, войти, вообще установить приложение. Четвёртая про бумаги, пятая про то, что его злит.» Не разбирай их здесь, скажи: «дальше по каждой отдельно, и сразу что мы делаем».</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не углубляйся ни в одну из четырёх — на это есть свои слайды. Не говори «это всё критично»: первые две действительно мешают покупателю, четвёртая — вопрос бумаг.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А что, всё так плохо?»</i> — «Нет. Приложение сделано, люди его поставили. Ломается конкретно то, что нужно в момент покупки, — вот это и чиним.»</div></div>
 </aside>
@@ -368,7 +377,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Проблема 1 · у кассы не показать карту</div>
+    <div class="kick an" style="--d:0ms">Карта у кассы</div>
     <h1 class="an" style="--d:60ms">В магазине нет интернета — и штрихкод не появляется</h1>
     <div class="ps">
       <div>
@@ -402,7 +411,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 03 · Проблема 1 · карта у кассы</div>
+  <div class="nh">Слайд 03 · Карта у кассы</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Подвал, металл, иногда глушат сигнал. Человек достаёт телефон, а приложение вместо кода показывает ошибку — и за ним очередь.» Дальше главное: «покупатель решил это сам, он просто сфотографировал код. Скриншот открывается мгновенно и без интернета. Только приложение он после этого не открывает никогда.» Потом переходи вправо: «мы делаем так, чтобы код был на первом экране и рисовался без сети».</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что это поднимет продажи — мы этого не мерили. Не называй долю магазинов без связи, мы её не считали. И не говори «офлайн-режим» — говори «работает без интернета».</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«У нас же карта работает, люди показывают»</i> — «Показывают. Фотографией из галереи. Покупка есть, а приложение не открыто — и всё остальное, что вы в него вложили, человек не видит.»<br><i>«На всех ли кассах заработает?»</i> — «Там, где сканер читает экран телефона, — да. Часть сканеров экран не видит физически, поэтому мы сначала соберём через управляющих, что стоит на кассах.»</div></div>
@@ -413,7 +422,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Проблема 2 · в приложение не войти</div>
+    <div class="kick an" style="--d:0ms">Вход в приложение</div>
     <h1 class="an" style="--d:60ms">Код по СМС не приходит, а вход постоянно слетает</h1>
     <div class="ps">
       <div>
@@ -443,7 +452,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 04 · Проблема 2 · вход</div>
+  <div class="nh">Слайд 04 · Вход в приложение</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Это самая громкая жалоба во всей категории — не только у вас, у всех. Человек переставил телефон или приложение, и всё: код не приходит, а после нескольких попыток его ещё и блокируют на несколько дней.» Дальше: «мы делаем так, чтобы входить нужно было один раз».</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что СМС начнут доходить всегда — это зависит от оператора. Мы отвечаем за то, что вход не будет слетать и что человеку будет понятно, что делать.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Это точно наша проблема, а не оператора?»</i> — «И та и другая. Доставку СМС мы не контролируем, но человека не должно выбрасывать из приложения каждый раз — вот это наша часть, и она чинится.»</div></div>
@@ -454,14 +463,14 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Проблема 3 · правила программы нигде не опубликованы</div>
-    <h1 class="an" style="--d:60ms">Сайт с правилами не открывается,<br>а приложение выпущено на частное лицо</h1>
+    <div class="kick an" style="--d:0ms">Где живёт приложение и его правила</div>
+    <h1 class="an" style="--d:60ms">В Google Play приложения нет,<br>а правила программы негде прочитать</h1>
     <div class="ps">
       <div>
         <div class="pshead bad an" style="--d:120ms">Что мы нашли</div>
         <ul class="plain">
-          <li class="an" style="--d:160ms">Сайт <b>tdpivoman.ru</b> не открывается. Из App Store на него ведут три обязательные ссылки.</li>
-          <li class="an" style="--d:200ms">Пока сайт лежит, правила ПМкоинов прочитать негде — ни покупателю, ни проверяющему.</li>
+          <li class="an" style="--d:160ms"><b>В Google Play приложения нет вообще.</b> Страница отдаёт ошибку: владельцу Android-телефона его оттуда не установить.</li>
+          <li class="an" style="--d:200ms">Сайт <b>tdpivoman.ru</b> не открывается, а из App Store на него ведут три обязательные ссылки. Правила ПМкоинов прочитать негде — ни покупателю, ни проверяющему.</li>
           <li class="an" style="--d:240ms">В App Store приложение выпущено с личного аккаунта человека, а не на ООО.</li>
           <li class="an" style="--d:280ms">На 26 отзывов покупателей никто не ответил.</li>
         </ul>
@@ -469,18 +478,18 @@ body.measuring .slide{display:flex!important;visibility:hidden}
       <div>
         <div class="pshead good an" style="--d:140ms">Что сделаем</div>
         <ul class="plain">
-          <li class="an" style="--d:180ms">Поднимем сайт заново и опубликуем на нём правила программы.</li>
-          <li class="an" style="--d:220ms">Выпустим приложение с аккаунта вашего ООО.</li>
-          <li class="an" style="--d:260ms">Ответим на отзывы и дальше будем отвечать по понятному правилу.</li>
-          <li class="an" style="--d:300ms">Сайт поднимем с чистого листа, а не из старой копии.</li>
+          <li class="an" style="--d:180ms"><b>Выпустим приложение в Google Play.</b> Сейчас этот канал установок у вас закрыт полностью.</li>
+          <li class="an" style="--d:220ms">Поднимем сайт с чистого листа и опубликуем на нём правила программы.</li>
+          <li class="an" style="--d:260ms">Выпустим приложение с аккаунта вашего ООО.</li>
+          <li class="an" style="--d:300ms">Ответим на отзывы и дальше будем отвечать по понятному правилу.</li>
         </ul>
       </div>
     </div>
-    <div class="resline an" style="--d:380ms">Приносим как есть. <em>Это стоит закрыть до того, как заметит кто-то другой.</em></div>
+    <div class="resline an" style="--d:380ms">Человек с Android-телефоном ищет приложение в Google Play. <em>Там его нет.</em></div>
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 05 · Проблема 3 · правила и карточка · деликатный</div>
+  <div class="nh">Слайд 05 · Google Play и страница приложения · деликатный</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Мы это нашли, пока разбирали вашу карточку в сторе, и приносим как есть.» Про сайт: «на него ведут три обязательные ссылки из App Store, а он не открывается — значит, правила программы формально нигде не опубликованы». Про издателя — спокойно, как техническую деталь: «выпустим приложение с аккаунта вашего ООО».</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Слова «нарушение» здесь нет и в речи быть не должно. Не «у вас проблема», а «вот что стоит закрыть». Не гадай, почему приложение выпущено на частное лицо. И не предлагай восстановить старый сайт из копии — там осталась акция по табаку, а по табаку правила строже, чем по пиву.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А установки и оценки мы потеряем?»</i> — «Есть два пути. Новая карточка на ООО: начинаем с чистого листа, старые плохие отзывы не переезжают, но и установки не переезжают. Либо перенос текущей карточки на ООО: всё сохраняется, но вместе со старыми отзывами. Что важнее — решаете вы, мы закрываем оба варианта.»<br><i>«Почему вы туда вообще полезли?»</i> — «Это первое, что открывает любой, кто захочет придраться.»</div></div>
@@ -491,7 +500,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense xt">
-    <div class="kick an" style="--d:0ms">Проблема 4 · предложение по программе лояльности</div>
+    <div class="kick an" style="--d:0ms">Предложение по программе лояльности</div>
     <h1 class="an" style="--d:60ms">Сейчас программа считает, сколько человек потратил.<br>Предлагаем считать, как часто он приходит.</h1>
     <div class="three">
       <div>
@@ -526,21 +535,64 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 06 · Проблема 4 · лояльность</div>
+  <div class="nh">Слайд 06 · Программа лояльности</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Сегодня программа меряет, сколько человек потратил. Тридцать тысяч за три месяца — это про размер кошелька, а не про то, как часто он к вам заходит.» Дальше предложение: «считать походы. Пришёл — засчитали, не больше раза в день. Накопленное не сгорает. А верхний уровень пусть даёт не скидку, а доступ: редкий сорт, новинки раньше всех.» И закрой главное опасение: «баллы никто не отменяет, выгода у покупателя остаётся».</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не называй новые цифры: сколько походов на уровень, какой множитель, курс коина. Их считают по вашим выгрузкам, а выгрузок у нас нет. Не говори, что нынешний порог — ошибка: он просто меряет другое.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«То есть вы предлагаете раздавать больше?»</i> — «Нет. Перестать платить за размер чека и начать поощрять возвраты. Верхний уровень вообще не про деньги.»<br><i>«А наши 5% отменяются?»</i> — «Нет, процент остаётся. Меняется то, как уровень зарабатывается и что накопленное не сгорает.»<br><b>Перед встречей уточни у Артёма:</b> 5% — это начисление коинов или скидка в чеке? Правила не опубликованы, проверить неоткуда.</div></div>
 </aside>
 </section>
 
-<!-- ═══════════ 07 · СОСТАВ РАБОТ ═══════════ -->
+<!-- ═══════════ 07 · ВНЕШНИЙ ВИД ═══════════ -->
+<section class="slide">
+<div class="cwrap"><div class="canvas">
+  <div class="pad dense">
+    <div class="kick an" style="--d:0ms">Внешний вид</div>
+    <h1 class="an" style="--d:60ms">Приложение должно выглядеть как пивная сеть,<br>а не как продуктовый магазин</h1>
+    <div class="ps">
+      <div>
+        <div class="pshead bad an" style="--d:120ms">Как сейчас</div>
+        <ul class="plain">
+          <li class="an" style="--d:160ms">Оформление такое же, как у любой сети у дома: светлый фон, красные кнопки, плитки товаров.</li>
+          <li class="an" style="--d:200ms">Человек открывает приложение и не чувствует, что пришёл за пивом.</li>
+          <li class="an" style="--d:240ms">Ваш знак — красный пятиугольник с зелёными буквами — в оформлении почти не участвует.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="pshead good an" style="--d:140ms">Что предлагаем</div>
+        <ul class="plain">
+          <li class="an" style="--d:180ms">Тёмная витрина, тёплый янтарь и солод — цвета самого напитка.</li>
+          <li class="an" style="--d:220ms">Зелёный берём из вашего знака, он становится фирменным, а не случайным.</li>
+          <li class="an" style="--d:260ms">Карточка сорта выглядит как этикетка, а не как товар в корзине.</li>
+        </ul>
+        <div class="pal an" style="--d:300ms">
+          <div><i style="background:#151210"></i><span>витрина</span></div>
+          <div><i style="background:#3B2C1E"></i><span>солод</span></div>
+          <div><i style="background:#E8A93A"></i><span>янтарь</span></div>
+          <div><i style="background:#4C5A28"></i><span>хмель</span></div>
+          <div><i style="background:#DCC098"></i><span>пена</span></div>
+          <div><i style="background:#F7F2E9"></i><span>бумага</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="resline an" style="--d:360ms">Эта презентация собрана в той же гамме. <em>Так будет выглядеть и приложение.</em></div>
+  </div>
+</div></div>
+<aside class="notes">
+  <div class="nh">Слайд 07 · Внешний вид</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Сейчас приложение по виду не отличить от приложения продуктового магазина. Открываешь — и ничего не говорит о том, что это пиво.» Дальше предложение: «берём цвета самого напитка — тёмная витрина, янтарь, солод, зелёный из вашего знака. Карточка сорта должна выглядеть как этикетка, а не как товар в корзине.» И покажи на экран: «эта презентация собрана ровно в той гамме, которую мы предлагаем, — так будет выглядеть и приложение».</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не сравнивай вслух с конкретными сетями по именам — владелец этот дизайн когда-то утверждал, и сравнение прозвучит как упрёк. Говори «как у сети у дома». Не обещай, что новый вид сам по себе поднимет продажи. И не втягивайся в спор про конкретные оттенки: на встрече договариваемся о направлении, а не утверждаем макеты.</div></div>
+  <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А что не так с нынешним оформлением?»</i> — «Оно не плохое. Оно нейтральное: под ним может быть любой магазин. У вас крепкий знак и понятный товар — это стоит использовать.»<br><i>«Кто будет рисовать и когда увидим?»</i> — «Начнём с экрана карты и кода, он и так переделывается. Покажем на нём, дальше по каталогу.»</div></div>
+</aside>
+</section>
+
+<!-- ═══════════ 08 · СОСТАВ РАБОТ ═══════════ -->
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense xt">
     <div class="kick an" style="--d:0ms">Состав работ</div>
     <div style="display:flex;align-items:baseline;gap:20px">
       <h1 class="an" style="--d:60ms">Что именно мы сделаем</h1>
-      <div class="wcount an" style="--d:100ms">31 работа</div>
+      <div class="wcount an" style="--d:100ms">36 работ</div>
     </div>
     <div class="works">
       <div class="wcol">
@@ -600,13 +652,23 @@ body.measuring .slide{display:flex!important;visibility:hidden}
             <li>Отчёт: сколько включили и использовали</li>
           </ul>
         </div>
-        <div class="wgrp an" style="--d:350ms">
+        <div class="wgrp an" style="--d:330ms">
+          <h5>Внешний вид</h5>
+          <ul>
+            <li>Новая цветовая гамма приложения</li>
+            <li>Экран карты и кода</li>
+            <li>Карточка сорта как этикетка</li>
+            <li>Значок приложения и картинки в сторах</li>
+          </ul>
+        </div>
+        <div class="wgrp an" style="--d:370ms">
           <h5>Страница приложения и отзывы</h5>
           <ul>
             <li>Ответы на 26 отзывов без ответа</li>
             <li>Правило, как отвечать дальше</li>
             <li>Приложение на аккаунте вашего ООО</li>
             <li>Сайт tdpivoman.ru заново</li>
+            <li>Выпуск приложения в Google Play</li>
           </ul>
         </div>
       </div>
@@ -615,14 +677,14 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 07 · Состав работ</div>
-  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Тридцать одна работа по пяти направлениям. Почти каждая строка привязана к тому, что мы разобрали на предыдущих слайдах.» Список целиком не читай — дай залу пройтись глазами и назови три-четыре пункта, которые им ближе: код без интернета, вход, ответы на отзывы, сайт.</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что все тридцать одна будут сделаны сразу. Не читай слайд построчно — убивает темп. И не обещай наличие в литрах, даже если попросят: этого нет ни в одной системе.</div></div>
+  <div class="nh">Слайд 08 · Состав работ</div>
+  <div class="row"><div class="lb say">Скажи</div><div class="tx">«Тридцать шесть работ по семи направлениям. Почти каждая строка привязана к тому, что мы разобрали на предыдущих слайдах.» Список целиком не читай — дай залу пройтись глазами и назови три-четыре пункта, которые им ближе: код без интернета, вход, ответы на отзывы, сайт.</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не обещай, что все тридцать шесть будут сделаны сразу. Не читай слайд построчно — убивает темп. И не обещай наличие в литрах, даже если попросят: этого нет ни в одной системе.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Это всё обязательно?»</i> — «Нет. Обязательно то, что мешает у кассы. Остальное берётся отдельно, и вы решаете, где остановиться.»<br><i>«А почему не показать, есть ли пиво в магазине?»</i> — «Потому что цифра в учёте и то, что реально в кране, — разные вещи. Человек приедет, а сорта нет, и виноватым будет приложение. У конкурентов это уже случилось.»</div></div>
 </aside>
 </section>
 
-<!-- ═══════════ 08 · С ЧЕГО НАЧНЁМ ═══════════ -->
+<!-- ═══════════ 09 · С ЧЕГО НАЧНЁМ ═══════════ -->
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
@@ -652,7 +714,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 08 · С чего начинаем</div>
+  <div class="nh">Слайд 09 · С чего начинаем</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Работу по карте, коду и отзывам мы начинаем сразу, для неё от вас ничего не нужно. Программа лояльности упирается в четыре ответа — они справа.» Первый вопрос главный: как сегодня начисляются коины и какая программа стоит на кассах. Скажи, что пришлёшь этот список письмом в тот же день.</div></div>
   <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не проси решения прямо в комнате. Не сваливай все четыре вопроса на одного человека — про кассы и про выгрузки обычно отвечают разные люди. И не заканчивай на «ну вот как-то так».</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«Кому это писать и в каком виде?»</i> — «Одно письмо своими словами от того, кто отвечает за кассы, и выгрузки в любом виде, хоть в Excel. Шаблон пришлём в тот же день, чтобы вашим людям не пришлось ничего придумывать.»</div></div>
