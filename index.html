@@ -190,14 +190,14 @@ table.t tr:last-child td{border-bottom:0}
   font-variant-numeric:tabular-nums;line-height:1}
 
 /* ─────────── 09 · этапы ─────────── */
-.stages{margin-top:16px;border-top:1px solid var(--hair)}
+.stages{margin-top:12px;border-top:1px solid var(--hair)}
 .stg{display:grid;grid-template-columns:70px 1fr;gap:0 28px;align-items:baseline;
-  padding:9px 0;border-bottom:1px solid var(--hair-2)}
+  padding:6px 0;border-bottom:1px solid var(--hair-2)}
 .stg:last-child{border-bottom:0}
-.stg .n{font-size:34px;font-weight:200;line-height:.85;color:var(--ochre);
+.stg .n{font-size:28px;font-weight:200;line-height:.85;color:var(--ochre);
   font-variant-numeric:tabular-nums;letter-spacing:-.03em}
-.stg .t{font-size:21.5px;font-weight:600;line-height:1.25;color:var(--ink);letter-spacing:-.015em}
-.stg .c{font-size:16px;line-height:1.4;color:var(--ink-2);margin-top:5px}
+.stg .t{font-size:19.5px;font-weight:600;line-height:1.25;color:var(--ink);letter-spacing:-.015em}
+.stg .c{font-size:15px;line-height:1.38;color:var(--ink-2);margin-top:4px}
 
 /* ─────────── проблема → решение ─────────── */
 .ps{display:grid;grid-template-columns:1fr 1fr;gap:0 54px;margin-top:20px}
@@ -213,6 +213,11 @@ ul.plain li b{color:var(--ink);font-weight:600}
 .qbox q{display:block;font-size:16px;line-height:1.42;color:var(--ink);quotes:"«" "»"}
 .qbox .who{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
   text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+.solve{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair-3);
+  display:grid;grid-template-columns:auto 1fr;gap:0 24px;align-items:baseline}
+.solve .lbl{font-family:var(--mono);font-size:21px;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ochre);white-space:nowrap}
+.solve .txt{font-size:19px;font-weight:600;line-height:1.35;color:var(--ink);letter-spacing:-.012em}
 .resline{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair-3);
   font-size:20px;font-weight:600;line-height:1.35;color:var(--ink);letter-spacing:-.012em}
 .resline em{font-style:normal;color:var(--ochre)}
@@ -379,31 +384,37 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad">
-    <div class="kick an" style="--d:0ms">Что не так сейчас</div>
-    <h1 class="an" style="--d:60ms">Пять проблем. Дальше по каждой — решение.</h1>
+    <div class="kick an" style="--d:0ms">Коротко</div>
+    <h1 class="an" style="--d:60ms">Семь проблем</h1>
     <div class="stages">
-      <div class="stg an" style="--d:140ms"><div class="n">01</div>
+      <div class="stg an" style="--d:130ms"><div class="n">01</div>
         <div><div class="t">У кассы не показать карту</div>
-        <div class="c">В магазине нет интернета, и штрихкод на экране не появляется.</div></div></div>
-      <div class="stg an" style="--d:190ms"><div class="n">02</div>
-        <div><div class="t">В приложение не войти</div>
-        <div class="c">Код по СМС не приходит, а вход слетает после переустановки.</div></div></div>
-      <div class="stg an" style="--d:240ms"><div class="n">03</div>
-        <div><div class="t">Приложения нет в Google Play</div>
-        <div class="c">Владельцы Android-телефонов не могут его там найти и установить.</div></div></div>
-      <div class="stg an" style="--d:290ms"><div class="n">04</div>
-        <div><div class="t">Правила программы нигде не опубликованы</div>
-        <div class="c">Сайт с правилами не открывается, а приложение выпущено на частное лицо.</div></div></div>
-      <div class="stg an" style="--d:340ms"><div class="n">05</div>
-        <div><div class="t">Уровень зависит от суммы, а не от частоты</div>
-        <div class="c">По отзывам покупателей, чтобы держать процент, надо выкупать на 30 000 ₽ за три месяца.</div></div></div>
+        <div class="c">В зале нет интернета, штрихкод не появляется.</div></div></div>
+      <div class="stg an" style="--d:168ms"><div class="n">02</div>
+        <div><div class="t">Проблемы с верификацией</div>
+        <div class="c">Код по СМС не приходит, вход слетает.</div></div></div>
+      <div class="stg an" style="--d:206ms"><div class="n">03</div>
+        <div><div class="t">Некоторые владельцы Android не могут найти приложение</div>
+        <div class="c">Его нет в Google Play.</div></div></div>
+      <div class="stg an" style="--d:244ms"><div class="n">04</div>
+        <div><div class="t">Юридические риски</div>
+        <div class="c">Правила программы нигде не опубликованы, приложение выпущено на частное лицо.</div></div></div>
+      <div class="stg an" style="--d:282ms"><div class="n">05</div>
+        <div><div class="t">Недовольство системой лояльности</div>
+        <div class="c">Уровень зависит от суммы покупок, а не от того, как часто человек заходит.</div></div></div>
+      <div class="stg an" style="--d:320ms"><div class="n">06</div>
+        <div><div class="t">Нельзя выбрать продукт заранее</div>
+        <div class="c">Не видно, в каком магазине рядом он есть.</div></div></div>
+      <div class="stg an" style="--d:358ms"><div class="n">07</div>
+        <div><div class="t">Внешний вид</div>
+        <div class="c">Приложение выглядит как продуктовый магазин, а не как пивная сеть.</div></div></div>
     </div>
   </div>
 </div></div>
 <aside class="notes">
-  <div class="nh">Слайд 03 · Пять проблем</div>
+  <div class="nh">Слайд 03 · Семь проблем</div>
   <div class="row"><div class="lb say">Скажи</div><div class="tx">«Вот пять вещей. Первые три — про то, что человек физически не может сделать: показать карту, войти, вообще установить приложение. Четвёртая про бумаги, пятая — про условия программы: по отзывам, порог выкупа людям тяжело держать.» Не разбирай их здесь, скажи: «дальше по каждой отдельно, и сразу что мы делаем».</div></div>
-  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не углубляйся ни в одну из пяти — на это есть свои слайды. Не говори «это всё критично»: первые три действительно мешают покупателю, четвёртая — вопрос бумаг, пятая — про условия программы.</div></div>
+  <div class="row"><div class="lb dont">Не говори</div><div class="tx">Не углубляйся ни в одну из семи — на это есть свои слайды. Не говори «это всё критично»: первые три мешают покупателю прямо сейчас, остальные — про упущенные возможности.</div></div>
   <div class="row"><div class="lb qa">Спросят</div><div class="tx"><i>«А что, всё так плохо?»</i> — «Нет. Приложение сделано, люди его поставили. Ломается конкретно то, что нужно в момент покупки, — вот это и чиним.»</div></div>
 </aside>
 </section>
@@ -418,10 +429,9 @@ body.measuring .slide{display:flex!important;visibility:hidden}
       <div>
         <div class="pshead bad an" style="--d:120ms">Что происходит сейчас</div>
         <ul class="plain">
-          <li class="an" style="--d:160ms">Человек открывает приложение у кассы, а оно первым делом лезет в интернет.</li>
-          <li class="an" style="--d:200ms">В зале связи нет. Вместо кода — ошибка, а сзади очередь.</li>
-          <li class="an" style="--d:240ms">Человек один раз фотографирует код и дальше показывает картинку из галереи.</li>
-          <li class="an" style="--d:280ms"><b>Приложение он больше не открывает.</b></li>
+          <li class="an" style="--d:160ms">В зале нет связи. Вместо кода — ошибка, а сзади очередь.</li>
+          <li class="an" style="--d:200ms">Человек фотографирует код и показывает картинку из галереи.</li>
+          <li class="an" style="--d:240ms"><b>Приложение он больше не открывает.</b></li>
         </ul>
         <div class="qbox an" style="--d:320ms">
           <q>Через мобильный интернет оно не работает</q>
@@ -443,7 +453,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
         </ul>
       </div>
     </div>
-    <div class="resline an" style="--d:400ms">Открыл приложение — код на экране. <em>Работает даже там, где связи нет вообще.</em></div>
+    <div class="solve an" style="--d:400ms"><div class="lbl">Решение</div><div class="txt">Открыл приложение — код на экране. Даже без связи.</div></div>
   </div>
 </div></div>
 <aside class="notes">
@@ -458,16 +468,16 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Вход в приложение</div>
-    <h1 class="an" style="--d:60ms">Код по СМС не приходит, а вход постоянно слетает</h1>
+    <div class="kick an" style="--d:0ms">Проблемы с верификацией</div>
+    <h1 class="an" style="--d:60ms">Код по СМС не приходит, вход слетает</h1>
     <div class="ps">
       <div>
         <div class="pshead bad an" style="--d:120ms">Что происходит сейчас</div>
         <ul class="plain">
-          <li class="an" style="--d:160ms">Человек переставил приложение — и должен входить заново.</li>
-          <li class="an" style="--d:200ms">Код по СМС не приходит, а после нескольких попыток приложение перестаёт его слать.</li>
-          <li class="an" style="--d:240ms">Ждать приходится днями, и часть людей просто удаляет приложение.</li>
-          <li class="an" style="--d:280ms"><b>Это самая частая жалоба у приложений таких же сетей.</b></li>
+          <li class="an" style="--d:160ms">Переставил приложение — входи заново.</li>
+          <li class="an" style="--d:200ms">Код по СМС не приходит, после нескольких попыток его перестают слать.</li>
+          <li class="an" style="--d:240ms"><b>Одна из самых частых жалоб в категории.</b></li>
+          <li class="an" style="--d:280ms">Часть людей после этого приложением не пользуется.</li>
         </ul>
         <div class="qbox an" style="--d:320ms">
           <q>уже больше пару месяцев не могу зайти в приложение, ни по смс, ни по звонку</q>
@@ -477,14 +487,14 @@ body.measuring .slide{display:flex!important;visibility:hidden}
       <div>
         <div class="pshead good an" style="--d:140ms">Что сделаем</div>
         <ul class="plain">
-          <li class="an" style="--d:180ms">Вход будет сохраняться — заново входить не придётся.</li>
-          <li class="an" style="--d:220ms">Если код не пришёл, приложение предложит звонок вместо СМС.</li>
-          <li class="an" style="--d:260ms">Вместо «что-то пошло не так» человек увидит, что именно случилось и что делать.</li>
-          <li class="an" style="--d:300ms">Найдём телефоны, на которых вход ломается чаще всего, и починим именно на них.</li>
+          <li class="an" style="--d:180ms">Вход сохраняется — заново входить не нужно.</li>
+          <li class="an" style="--d:220ms">Не пришла СМС — приложение предложит звонок.</li>
+          <li class="an" style="--d:260ms">Вместо «что-то пошло не так» — понятная причина и что делать.</li>
+          <li class="an" style="--d:300ms">Найдём телефоны, где вход ломается чаще, и починим на них.</li>
         </ul>
       </div>
     </div>
-    <div class="resline an" style="--d:380ms">Человек входит один раз. <em>Дальше приложение просто открывается.</em></div>
+    <div class="solve an" style="--d:380ms"><div class="lbl">Решение</div><div class="txt">Человек входит один раз. Дальше приложение просто открывается.</div></div>
   </div>
 </div></div>
 <aside class="notes">
@@ -499,29 +509,29 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Где живёт приложение и его правила</div>
-    <h1 class="an" style="--d:60ms">В Google Play приложения нет,<br>а правила программы негде прочитать</h1>
+    <div class="kick an" style="--d:0ms">Приложение не найти в Google Play</div>
+    <h1 class="an" style="--d:60ms">Некоторые владельцы Android<br>не могут скачать приложение</h1>
     <div class="ps">
       <div>
         <div class="pshead bad an" style="--d:120ms">Что мы нашли</div>
         <ul class="plain">
-          <li class="an" style="--d:160ms"><b>В Google Play приложения нет вообще.</b> Страница отдаёт ошибку: владельцу Android-телефона его оттуда не установить.</li>
-          <li class="an" style="--d:200ms">Сайт <b>tdpivoman.ru</b> не открывается, а из App Store на него ведут три обязательные ссылки. Правила ПМкоинов прочитать негде — ни покупателю, ни проверяющему.</li>
-          <li class="an" style="--d:240ms">В App Store приложение выпущено с личного аккаунта человека, а не на ООО.</li>
+          <li class="an" style="--d:160ms"><b>В Google Play приложения нет.</b> Страница отдаёт ошибку — скачать оттуда нельзя.</li>
+          <li class="an" style="--d:200ms">Сайт <b>tdpivoman.ru</b> не открывается. Правила ПМкоинов прочитать негде — ни покупателю, ни проверяющему.</li>
+          <li class="an" style="--d:240ms">В App Store приложение выпущено на частное лицо, а не на ООО.</li>
           <li class="an" style="--d:280ms">26 отзывов покупателей остались без ответа.</li>
         </ul>
       </div>
       <div>
         <div class="pshead good an" style="--d:140ms">Что сделаем</div>
         <ul class="plain">
-          <li class="an" style="--d:180ms"><b>Выпустим приложение в Google Play.</b> Сейчас этот канал установок у вас закрыт полностью.</li>
-          <li class="an" style="--d:220ms">Поднимем сайт с чистого листа и опубликуем на нём правила программы.</li>
-          <li class="an" style="--d:260ms">Выпустим приложение с аккаунта вашего ООО.</li>
-          <li class="an" style="--d:300ms">Ответим на отзывы и дальше будем отвечать по понятному правилу.</li>
+          <li class="an" style="--d:180ms"><b>Выпустим приложение в Google Play.</b> Сейчас этот канал закрыт полностью.</li>
+          <li class="an" style="--d:220ms">Поднимем сайт заново и опубликуем правила программы.</li>
+          <li class="an" style="--d:260ms">Приложение будет издаваться от вашего ООО.</li>
+          <li class="an" style="--d:300ms">Ответим на отзывы и дальше будем отвечать по правилу.</li>
         </ul>
       </div>
     </div>
-    <div class="resline an" style="--d:380ms">Приложение появляется в Google Play. <em>Канал установок для Android открывается.</em></div>
+    <div class="solve an" style="--d:380ms"><div class="lbl">Решение</div><div class="txt">Приложение появляется в Google Play. Android снова может его скачать.</div></div>
   </div>
 </div></div>
 <aside class="notes">
@@ -536,14 +546,14 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense xt">
-    <div class="kick an" style="--d:0ms">Предложение по программе лояльности</div>
-    <h1 class="an" style="--d:60ms">Сейчас программа считает, сколько человек потратил.<br>Предлагаем считать, как часто он приходит.</h1>
+    <div class="kick an" style="--d:0ms">Недовольство системой лояльности</div>
+    <h1 class="an" style="--d:60ms">Предложение обновлённой<br>программы лояльности</h1>
     <div class="three">
       <div>
         <div class="pshead bad an" style="--d:120ms">Как сейчас</div>
         <ul class="plain">
-          <li class="an" style="--d:160ms">По отзывам покупателей: чтобы держать свой процент, надо выкупать на <b>30 000 ₽ за три месяца</b>.</li>
-          <li class="an" style="--d:190ms">Не успел — уровень падает, накопленное сгорает, копишь заново.</li>
+          <li class="an" style="--d:160ms">Чтобы держать свой процент, надо выкупать на <b>30 000 ₽ за три месяца</b>.</li>
+          <li class="an" style="--d:190ms">Не успел — уровень упал, накопленное сгорело.</li>
         </ul>
         <div class="qbox an" style="--d:220ms">
           <q>Обнулили бонусы с причиной давно не списывал, уведомление появилось в приложении за 3 дня до списания</q>
@@ -553,21 +563,21 @@ body.measuring .slide{display:flex!important;visibility:hidden}
       <div>
         <div class="pshead good an" style="--d:140ms">Что предлагаем</div>
         <ul class="plain">
-          <li class="an" style="--d:180ms">Уровень растёт от <b>числа походов в магазин</b>, а не от суммы. Не больше одного похода в день.</li>
+          <li class="an" style="--d:180ms">Уровень скидки считается <b>за походы, а не за сумму</b>. Не больше одного похода в день.</li>
           <li class="an" style="--d:210ms">Накопленное не сгорает.</li>
-          <li class="an" style="--d:240ms">Верхний уровень даёт не скидку, а <b>доступ</b>: редкие сорта и новинки раньше всех.</li>
+          <li class="an" style="--d:240ms">Верхний уровень даёт <b>доступ</b>: редкая продукция и новинки раньше всех.</li>
         </ul>
       </div>
       <div>
         <div class="pshead an" style="--d:160ms">Почему так лучше</div>
         <ul class="plain">
-          <li class="an" style="--d:200ms">Порог считает сумму за период. Как часто человек заходит, он не учитывает. Сколько людей его выполняют — видно только по вашим выгрузкам.</li>
-          <li class="an" style="--d:230ms">Сегодня программа не различает того, кто заходит каждую неделю, и того, кто закупился дважды крупно. Для сети это разные покупатели.</li>
-          <li class="an" style="--d:260ms">Редкий сорт не стоит вам скидки, а как награда работает не хуже.</li>
+          <li class="an" style="--d:200ms">Порог считает сумму. Как часто человек заходит — не учитывает.</li>
+          <li class="an" style="--d:230ms">Программа не различает того, кто заходит каждую неделю, и того, кто закупился дважды. Для сети это разные покупатели.</li>
+          <li class="an" style="--d:260ms">Редкая продукция не стоит вам скидки, а как награда работает не хуже.</li>
         </ul>
       </div>
     </div>
-    <div class="resline an" style="--d:320ms">На кассе ничего не меняется. <em>Кассовую программу не трогаем.</em></div>
+    <div class="solve an" style="--d:320ms"><div class="lbl">Решение</div><div class="txt">Уровень за походы, а не за сумму. На кассе ничего не меняется.</div></div>
   </div>
 </div></div>
 <aside class="notes">
@@ -582,14 +592,14 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Каталог и карта магазинов</div>
-    <h1 class="an" style="--d:60ms">Выбрал сорт — видно, в каких магазинах рядом его отметили</h1>
+    <div class="kick an" style="--d:0ms">Нельзя выбрать продукт заранее</div>
+    <h1 class="an" style="--d:60ms">Выбрал продукт — видно, в каких магазинах<br>рядом его отметили</h1>
     <div class="ps">
       <div>
         <div class="pshead good an" style="--d:120ms">Как это работает</div>
         <ul class="plain">
-          <li class="an" style="--d:160ms">Человек открывает каталог и выбирает сорт.</li>
-          <li class="an" style="--d:200ms">На карте загораются ближайшие магазины, где этот сорт отмечен.</li>
+          <li class="an" style="--d:160ms">Человек открывает каталог и выбирает продукт.</li>
+          <li class="an" style="--d:200ms">На карте загораются магазины рядом, где он отмечен.</li>
           <li class="an" style="--d:240ms">Видно, когда отметили: <b>«есть · отмечено в 9:40»</b>. Человек сам решает, ехать или позвонить.</li>
           <li class="an" style="--d:280ms">Кнопка «Маршрут» открывает навигатор до этого магазина.</li>
         </ul>
@@ -598,13 +608,13 @@ body.measuring .slide{display:flex!important;visibility:hidden}
         <div class="pshead an" style="--d:140ms">Что это даёт</div>
         <ul class="plain">
           <li class="an" style="--d:180ms">Реже приходится обзванивать магазины и ездить наугад.</li>
-          <li class="an" style="--d:220ms">Редкий сорт становится поводом доехать до конкретной точки, а не взять что попало рядом с домом.</li>
+          <li class="an" style="--d:220ms">Редкая позиция становится поводом доехать до конкретной точки.</li>
           <li class="an" style="--d:260ms">Магазину видно в отчёте, что его отметки приводят людей, — это причина их ставить. Первое время карта будет неполной.</li>
-          <li class="an" style="--d:300ms">Появляется ответ на вопрос, который вам задают каждый день: «а где у вас есть вот это?»</li>
+          <li class="an" style="--d:300ms">Появляется ответ на вопрос, который вам задают каждый день: «а где это есть?»</li>
         </ul>
       </div>
     </div>
-    <div class="resline an" style="--d:370ms">Показываем отметку магазина и время. <em>Точный остаток в литрах — нет: он есть в учёте, но не на кране.</em></div>
+    <div class="solve an" style="--d:370ms"><div class="lbl">Решение</div><div class="txt">Показываем отметку магазина и время, а не остаток в литрах.</div></div>
   </div>
 </div></div>
 <aside class="notes">
@@ -619,15 +629,15 @@ body.measuring .slide{display:flex!important;visibility:hidden}
 <section class="slide">
 <div class="cwrap"><div class="canvas">
   <div class="pad dense">
-    <div class="kick an" style="--d:0ms">Внешний вид</div>
+    <div class="kick an" style="--d:0ms">Внешний вид приложения</div>
     <h1 class="an" style="--d:60ms">Хочется, чтобы приложение выглядело<br>как пивная сеть</h1>
     <div class="ps">
       <div>
         <div class="pshead an" style="--d:120ms">К чему хотим прийти</div>
         <ul class="plain">
           <li class="an" style="--d:160ms">Человек открывает приложение и сразу понимает, что пришёл за пивом.</li>
-          <li class="an" style="--d:200ms">Ваш знак работает на узнавание: красный пятиугольник и зелёные буквы — сильная пара, её стоит развернуть на всё приложение.</li>
-          <li class="an" style="--d:240ms">Карточка сорта работает как этикетка: сорт, пивоварня, вкус — чтобы захотелось попробовать.</li>
+          <li class="an" style="--d:200ms">Ваш знак работает на узнавание: красный пятиугольник и зелёные буквы стоит развернуть на всё приложение.</li>
+          <li class="an" style="--d:240ms">Карточка продукта работает как этикетка — чтобы захотелось попробовать.</li>
         </ul>
       </div>
       <div>
@@ -635,7 +645,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
         <ul class="plain">
           <li class="an" style="--d:180ms">Тёмная витрина, тёплый янтарь и солод — цвета самого напитка.</li>
           <li class="an" style="--d:220ms">Зелёный из вашего знака становится фирменным цветом приложения.</li>
-          <li class="an" style="--d:260ms">Карточка сорта оформляется как этикетка: сорт, пивоварня, вкус.</li>
+          <li class="an" style="--d:260ms">Карточка продукта оформляется как этикетка: название, пивоварня, вкус.</li>
         </ul>
         <div class="pal an" style="--d:300ms">
           <div><i style="background:#151210"></i><span>витрина</span></div>
@@ -647,7 +657,7 @@ body.measuring .slide{display:flex!important;visibility:hidden}
         </div>
       </div>
     </div>
-    <div class="resline an" style="--d:360ms">Эта презентация собрана в той же гамме. <em>Так будет выглядеть и приложение.</em></div>
+    <div class="solve an" style="--d:360ms"><div class="lbl">Решение</div><div class="txt">Эта презентация собрана в той же гамме. Так будет выглядеть и приложение.</div></div>
   </div>
 </div></div>
 <aside class="notes">
